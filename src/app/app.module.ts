@@ -1,20 +1,19 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { SharedModule } from './modules/shared-module/shared-module.module';
+
 import { AppComponent } from './app.component';
-import { UnderConstructionComponent } from './under-construction/under-construction.component';
 import { AboutComponent } from './about/about.component';
-import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UnderConstructionComponent,
     AboutComponent,
-    NavbarComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
