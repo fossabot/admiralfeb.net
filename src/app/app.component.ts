@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { UnderConstructionComponent } from './under-construction/under-construction.component';
 
 @Component({
   selector: 'app-root',
