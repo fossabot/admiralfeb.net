@@ -1,10 +1,15 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
+
+import { UnderConstructionComponent } from '../shared-module/under-construction/under-construction.component';
+
+const routes: Routes = [
+  { path: '', redirectTo: '/underconstruction', pathMatch: 'full' },
+  { path: 'underconstruction', component: UnderConstructionComponent },
+];
 
 @NgModule({
-  imports: [
-    CommonModule
-  ],
-  declarations: []
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
 })
 export class AppRoutingModule { }
