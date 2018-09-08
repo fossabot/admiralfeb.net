@@ -4,12 +4,14 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { UnderConstructionComponent } from './under-construction/under-construction.component';
 import { AboutComponent } from './about/about.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UnderConstructionComponent,
-    AboutComponent
+    AboutComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule
