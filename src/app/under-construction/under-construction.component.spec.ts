@@ -22,4 +22,9 @@ describe('UnderConstructionComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('\'Under Construction\' image should load', () => {
+    const compiled = fixture.debugElement.nativeElement;
+    expect(compiled.querySelector('#imgUnderConstruction').complete).toBeTruthy();
+  });
 });
