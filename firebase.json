@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "/dist/admiralfeb-net/",
+    "public": "dist/admiralfeb-net",
     "ignore": [
       "firebase.json",
       "**/.*",
