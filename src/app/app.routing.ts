@@ -8,8 +8,8 @@ const routes: Routes = [
   { path: 'home', component: CoreComponent},
   { path: 'underconstruction', component: UnderConstructionComponent },
   { path: 'wishlist', loadChildren: './modules/wishlist/wishlist.module#WishlistModule'},
-  { path: '', redirectTo: '/home', pathMatch: 'full' },
-  { path: '**', redirectTo: '/home', pathMatch: 'full'},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', redirectTo: 'home', pathMatch: 'full'},
 ];
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(routes);
