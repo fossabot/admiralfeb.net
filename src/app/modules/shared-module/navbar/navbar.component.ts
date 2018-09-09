@@ -18,9 +18,10 @@ export class NavbarComponent implements OnInit {
         const location = event.urlAfterRedirects;
         if (location.toUpperCase().includes('WISHLIST')) {
           this.onClick('wishlist');
-        }
-        if (location.toUpperCase().includes('CODE')) {
+        } else if (location.toUpperCase().includes('CODE')) {
           this.onClick('code');
+        } else {
+          this.onClick('home');
         }
       }
     });
