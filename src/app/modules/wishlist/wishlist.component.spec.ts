@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WishlistComponent } from './wishlist.component';
+import { SharedModule } from '../shared-module/shared-module.module';
 
 describe('WishlistComponent', () => {
   let component: WishlistComponent;
@@ -8,7 +9,8 @@ describe('WishlistComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WishlistComponent ]
+      declarations: [ WishlistComponent ],
+      imports: [SharedModule]
     })
     .compileComponents();
   }));
@@ -22,4 +24,9 @@ describe('WishlistComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it(`should have as title 'Admiralfeb\'s Wishlist'`, async(() => {
+    const app = fixture.debugElement.componentInstance;
+    expect(app.title).toEqual('Admiralfeb\'s Wishlist');
+  }));
 });

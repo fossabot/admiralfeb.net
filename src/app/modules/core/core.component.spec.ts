@@ -25,6 +25,11 @@ describe('CoreComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  it(`should have as title 'Admiralfeb\'s Website'`, async(() => {
+    const app = fixture.debugElement.componentInstance;
+    expect(app.title).toEqual('Admiralfeb\'s Website');
+  }));
+
   it('should render title in a h1 tag', async(() => {
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
