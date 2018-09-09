@@ -2,6 +2,7 @@
 
 # compiled output
 /.firebase
+/.vscode
 /dist
 /tmp
 /out-tsc
