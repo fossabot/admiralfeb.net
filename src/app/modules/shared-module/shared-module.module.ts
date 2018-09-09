@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { UnderConstructionComponent } from './under-construction/under-construction.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
+import { WlNavComponent } from './navbar/wishlist-nav/wl-nav.component';
 
 @NgModule({
   imports: [
@@ -11,7 +12,8 @@ import { RouterModule } from '@angular/router';
   ],
   declarations: [
     UnderConstructionComponent,
-    NavbarComponent
+    NavbarComponent,
+    WlNavComponent
   ],
   exports: [
     UnderConstructionComponent,

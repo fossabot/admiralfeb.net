@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { WishlistRoutingModule } from './wishlist.routing';
 
 import { WishlistComponent } from './wishlist.component';
-import { NavComponent } from './nav/nav.component';
 import { MainComponent } from './main/main.component';
 import { HomeComponent } from './home/home.component';
 import { ClothingComponent } from './clothing/clothing.component';
@@ -21,7 +20,6 @@ import { VideoComponent } from './video/video.component';
   declarations: [
     WishlistComponent,
     MainComponent,
-    NavComponent,
     ClothingComponent,
     HomeComponent,
     MoneyComponent,
