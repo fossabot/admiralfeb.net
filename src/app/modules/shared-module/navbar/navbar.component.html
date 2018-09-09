@@ -1,12 +1,16 @@
 <div class="navbar">
   <a class="linkImage" routerLink="home" title="Go to the Home Page"><img
       id="Z-img" src="../../../../assets/img/Z-img.png"></a>
-  <a class="linkText btn" id="btnHome" routerLink="home" routerLinkActive="active" (click)="onNavfromWishlist($event.target,'home')">Home</a>
-  <a class="linkText btn" id="btnWL" routerLink="wishlist" routerLinkActive="active" (click)="onWishlistClick()">Wishlist</a>
+  <a class="linkText btn" id="btnHome" routerLink="home" routerLinkActive="active" (click)="onClick($event.target.text,'home')">Home</a>
+  <a class="linkText btn" id="btnWL" routerLink="wishlist" routerLinkActive="active" (click)="onClick($event.target.text)">Wishlist</a>
+  <a class="linkText btn" id="btnCode" routerLink="code" routerLinkActive="active" (click)="onClick($event.target.text)">Code</a>
   <a class="linkText" href="mailto:Zachary@admiralfeb.net" title="Mail the owner
     of the site"
     target="_blank">Contact</a>
 </div>
 <div class="wishlist">
   <app-wl-nav></app-wl-nav>
+</div>
+<div class="code">
+  <app-code-nav></app-code-nav>
 </div>

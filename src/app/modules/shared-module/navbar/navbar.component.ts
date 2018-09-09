@@ -15,14 +15,25 @@ export class NavbarComponent implements OnInit {
 
   }
 
-  onWishlistClick(): void {
-    $('.wishlist').slideDown();
-    this.router.navigate(['wishlist'], { relativeTo: this.r });
+  onClick(target: string, location: string) {
+    switch (target.toUpperCase()) {
+      case 'HOME': {
+        $('.wishlist').slideUp();
+        $('.code').slideUp();
+        break;
+      }
+      case 'WISHLIST': {
+        $('.wishlist').slideDown();
+        $('.code').slideUp();
+        break;
+      }
+      case 'CODE': {
+        $('.code').slideDown();
+        $('.wishlist').slideUp();
+        break;
+      }
+      default:
+        break;
+    }
   }
-
-  onNavfromWishlist(target, location: string): void {
-    $('.wishlist').slideUp();
-    this.router.navigate([location], { relativeTo: this.r });
-  }
-
 }

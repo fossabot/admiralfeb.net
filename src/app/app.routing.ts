@@ -8,6 +8,7 @@ const routes: Routes = [
   { path: 'home', component: CoreComponent},
   { path: 'underconstruction', component: UnderConstructionComponent },
   { path: 'wishlist', loadChildren: './modules/wishlist/wishlist.module#WishlistModule'},
+  { path: 'code', loadChildren: './modules/code/code.module#CodeModule'},
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', redirectTo: 'home', pathMatch: 'full'},
 ];

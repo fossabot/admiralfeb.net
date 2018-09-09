@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { MainComponent } from './main/main.component';
-import { WishlistModule } from './wishlist.module';
 import { WishlistComponent } from './wishlist.component';
 import { ClothingComponent } from './clothing/clothing.component';
 import { VideoComponent } from './video/video.component';
