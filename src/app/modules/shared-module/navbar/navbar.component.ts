@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
-import { ActivatedRoute, Router, UrlSegment } from '@angular/router';
+import { ActivatedRoute, Router, UrlSegment, NavigationEnd } from '@angular/router';
+import { from } from 'rxjs';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-navbar',
@@ -9,13 +11,26 @@ import { ActivatedRoute, Router, UrlSegment } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private router: Router, private r: ActivatedRoute) { }
+  constructor(private router: Router, private r: ActivatedRoute) {
+    router.events.forEach((event) => {
+      console.log(event);
+      if (event instanceof NavigationEnd) {
+        const location = event.urlAfterRedirects;
+        if (location.toUpperCase().includes('WISHLIST')) {
+          this.onClick('wishlist');
+        }
+        if (location.toUpperCase().includes('CODE')) {
+          this.onClick('code');
+        }
+      }
+    });
+  }
 
   ngOnInit() {
 
   }
 
-  onClick(target: string, location: string) {
+  onClick(target: string) {
     switch (target.toUpperCase()) {
       case 'HOME': {
         $('.wishlist').slideUp();
