@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
-import { ActivatedRoute, Router, UrlSegment } from '@angular/router';
+import { ActivatedRoute, Router, UrlSegment, NavigationEnd } from '@angular/router';
+import { from } from 'rxjs';
+import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-navbar',
@@ -9,20 +11,45 @@ import { ActivatedRoute, Router, UrlSegment } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private router: Router, private r: ActivatedRoute) { }
+  constructor(private router: Router, private r: ActivatedRoute) {
+    router.events.forEach((event) => {
+      console.log(event);
+      if (event instanceof NavigationEnd) {
+        const location = event.urlAfterRedirects;
+        if (location.toUpperCase().includes('WISHLIST')) {
+          this.onClick('wishlist');
+        } else if (location.toUpperCase().includes('CODE')) {
+          this.onClick('code');
+        } else {
+          this.onClick('home');
+        }
+      }
+    });
+  }
 
   ngOnInit() {
 
   }
 
-  onWishlistClick(): void {
-    $('.wishlist').slideDown();
-    this.router.navigate(['wishlist'], { relativeTo: this.r });
+  onClick(target: string) {
+    switch (target.toUpperCase()) {
+      case 'HOME': {
+        $('.wishlist').slideUp();
+        $('.code').slideUp();
+        break;
+      }
+      case 'WISHLIST': {
+        $('.wishlist').slideDown();
+        $('.code').slideUp();
+        break;
+      }
+      case 'CODE': {
+        $('.code').slideDown();
+        $('.wishlist').slideUp();
+        break;
+      }
+      default:
+        break;
+    }
   }
-
-  onNavfromWishlist(target, location: string): void {
-    $('.wishlist').slideUp();
-    this.router.navigate([location], { relativeTo: this.r });
-  }
-
 }

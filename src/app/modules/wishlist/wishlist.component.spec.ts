@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { WishlistComponent } from './wishlist.component';
 import { SharedModule } from '../shared-module/shared-module.module';
+import { RouterTestingModule } from '@angular/router/testing';
 
 describe('WishlistComponent', () => {
   let component: WishlistComponent;
@@ -9,10 +10,10 @@ describe('WishlistComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WishlistComponent ],
-      imports: [SharedModule]
+      declarations: [WishlistComponent],
+      imports: [SharedModule, RouterTestingModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

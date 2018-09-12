@@ -5,6 +5,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { WlNavComponent } from './navbar/wishlist-nav/wl-nav.component';
 import { ErrorNotFoundComponent } from './error-not-found/error-not-found.component';
+import { CodeNavComponent } from './navbar/code-nav/code-nav.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { ErrorNotFoundComponent } from './error-not-found/error-not-found.compon
     UnderConstructionComponent,
     NavbarComponent,
     WlNavComponent,
-    ErrorNotFoundComponent
+    ErrorNotFoundComponent,
+    CodeNavComponent
   ],
   exports: [
     UnderConstructionComponent,
