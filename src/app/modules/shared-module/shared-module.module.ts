@@ -4,6 +4,8 @@ import { UnderConstructionComponent } from './under-construction/under-construct
 import { NavbarComponent } from './navbar/navbar.component';
 import { RouterModule } from '@angular/router';
 import { WlNavComponent } from './navbar/wishlist-nav/wl-nav.component';
+import { ErrorNotFoundComponent } from './error-not-found/error-not-found.component';
+import { CodeNavComponent } from './navbar/code-nav/code-nav.component';
 
 @NgModule({
   imports: [
@@ -13,7 +15,9 @@ import { WlNavComponent } from './navbar/wishlist-nav/wl-nav.component';
   declarations: [
     UnderConstructionComponent,
     NavbarComponent,
-    WlNavComponent
+    WlNavComponent,
+    ErrorNotFoundComponent,
+    CodeNavComponent
   ],
   exports: [
     UnderConstructionComponent,
