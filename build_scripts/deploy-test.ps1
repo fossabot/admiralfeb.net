@@ -6,6 +6,7 @@ param(
 $dir = Split-Path $MyInvocation.MyCommand.Path
 Push-Location $dir
 
+cd ..
 npm i -g firebase-tools
 write-host "starting deploy...";
 firebase --version;
