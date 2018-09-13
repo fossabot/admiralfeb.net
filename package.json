@@ -8,7 +8,8 @@
     "build-prod": "ng build --prod --aot",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy-test": "firebase deploy --token $fb_ci_token --project $fb_projectID --only hosting:test --message 'Release: $releaseMessage'"
   },
   "private": true,
   "dependencies": {
