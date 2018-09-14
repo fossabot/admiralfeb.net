@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy-test": "firebase deploy --token $fb_ci_token --project $fb_projectID --only hosting:test --message 'Release: $releaseMessage'"
+    "test-single-headless": "ng test --watch=false --browsers=PhantomJS"
   },
   "private": true,
   "dependencies": {
@@ -43,6 +43,9 @@
     "karma-coverage-istanbul-reporter": "~2.0.0",
     "karma-jasmine": "~1.1.1",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "karma-junit-reporter": "^1.2.0",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "phantomjs-prebuilt": "^2.1.16",
     "protractor": "~5.4.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1",
