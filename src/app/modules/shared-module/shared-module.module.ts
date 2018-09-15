@@ -6,22 +6,27 @@ import { RouterModule } from '@angular/router';
 import { WlNavComponent } from './navbar/wishlist-nav/wl-nav.component';
 import { ErrorNotFoundComponent } from './error-not-found/error-not-found.component';
 import { CodeNavComponent } from './navbar/code-nav/code-nav.component';
+import { CountdownComponent } from './countdown/countdown.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    RouterModule
+    RouterModule,
+    FormsModule,
   ],
   declarations: [
     UnderConstructionComponent,
     NavbarComponent,
     WlNavComponent,
     ErrorNotFoundComponent,
-    CodeNavComponent
+    CodeNavComponent,
+    CountdownComponent
   ],
   exports: [
     UnderConstructionComponent,
-    NavbarComponent
+    NavbarComponent,
+    CountdownComponent
   ]
 })
 export class SharedModule { }

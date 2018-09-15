@@ -12,7 +12,7 @@ describe('CoreComponent', () => {
       declarations: [ CoreComponent ],
       imports: [SharedModule]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -25,14 +25,14 @@ describe('CoreComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it(`should have as title 'Admiralfeb\'s Website'`, async(() => {
+  it(`should have as title 'Admiralfeb\'s Website'`, () => {
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('Admiralfeb\'s Website');
-  }));
+  });
 
-  it('should render title in a h1 tag', async(() => {
+  it('should render title in a h1 tag', () => {
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('h1').textContent).toContain('Welcome to Admiralfeb\'s Website!');
-  }));
+  });
 });
