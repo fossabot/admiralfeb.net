@@ -10,7 +10,7 @@ Set-Location ..
 npm i -g firebase-tools
 write-host "starting deploy...";
 firebase --version;
-firebase deploy --message "Release: $releaseMessage";
+firebase deploy --only hosting:prod --message "Release: $releaseMessage";
 write-host "deployment completed";
 
 Pop-Location
