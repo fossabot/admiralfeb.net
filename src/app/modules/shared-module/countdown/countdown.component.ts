@@ -1,4 +1,4 @@
-import { Component, ElementRef, OnInit, OnDestroy, Input } from '@angular/core';
+import { Component, ElementRef, OnInit, OnDestroy, Input, Output } from '@angular/core';
 import { Observable, Subscription, interval } from 'rxjs';
 import { switchMap, map } from 'rxjs/operators';
 
@@ -9,12 +9,12 @@ import { switchMap, map } from 'rxjs/operators';
 })
 export class CountdownComponent implements OnInit, OnDestroy {
   @Input() inputDate: string;
+  @Output() message: string;
 
   private future: Date;
   private futureString: string;
   private counter$: Observable<number>;
   private subscription: Subscription;
-  private message: string;
 
   constructor() {  }
 
