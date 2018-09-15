@@ -6,6 +6,7 @@
 /dist
 /tmp
 /out-tsc
+TESTS*.xml
 
 # dependencies
 /node_modules
@@ -35,7 +36,9 @@ npm-debug.log
 yarn-error.log
 testem.log
 /typings
+PAT
 
 # System Files
 .DS_Store
 Thumbs.db
+

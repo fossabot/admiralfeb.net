@@ -1,5 +1,17 @@
 {
   "projects": {
     "default": "admiralfebnet"
+  },
+  "targets": {
+    "admiralfebnet": {
+      "hosting": {
+        "test": [
+          "test-admiralfeb"
+        ],
+        "prod": [
+          "admiralfebnet"
+        ]
+      }
+    }
   }
 }
