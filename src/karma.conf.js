@@ -23,13 +23,13 @@ module.exports = function (config) {
       reports: ['html', 'lcovonly'],
       fixWebpackSourcePaths: true
     },
-    reporters: ['progress', 'kjhtml','junit'],
+    reporters: ['progress', 'kjhtml'],
     port: 9876,
     colors: true,
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome', 'PhantomJS'],
-    singleRun: true,
+    singleRun: false,
     // the default configuration
     /* junitReporter: {
       outputDir: '', // results will be saved as $outputDir/$browserName.xml
