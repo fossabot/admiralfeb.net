@@ -29,7 +29,7 @@ module.exports = function (config) {
     logLevel: config.LOG_INFO,
     autoWatch: true,
     browsers: ['Chrome', 'PhantomJS'],
-    singleRun: false,
+    singleRun: true,
     // the default configuration
     /* junitReporter: {
       outputDir: '', // results will be saved as $outputDir/$browserName.xml

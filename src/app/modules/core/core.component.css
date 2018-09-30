@@ -1,27 +1,16 @@
-* {
-    box-sizing: border-box;
+.page-header {
+  border: 0;
 }
-div{
-    margin: 0;
+
+.jumbotron {
+  text-align: center;
+  padding-top: 24px;
 }
-.column{
-    float:left;
-    padding: 10px;
+
+.dw {
+  color: blue;
 }
-.row:after{
-    content: "";
-    display: table;
-    clear: both;
-}
-.left{
-    width: 25%;
-}
-.right{
-    width: 75%
-}
-.dw{
-    color: blue;
-}
-p {
-    text-indent: 10px;
+
+#coming {
+  margin-bottom: 0;
 }
