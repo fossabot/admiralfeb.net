@@ -10,3 +10,6 @@ h3 {
 #main {
   padding-top: 24px;
 }
+#frmOneNote {
+  display: none;
+}
