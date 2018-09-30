@@ -21,7 +21,8 @@ import { LocalTimeComponent } from './local-time/local-time.component';
   ],
   exports: [
     UnderConstructionComponent,
-    CountdownComponent
+    CountdownComponent,
+    LocalTimeComponent
   ]
 })
 export class SharedModule { }
