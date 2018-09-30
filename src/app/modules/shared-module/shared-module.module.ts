@@ -5,6 +5,7 @@ import { RouterModule } from '@angular/router';
 import { ErrorNotFoundComponent } from './error-not-found/error-not-found.component';
 import { CountdownComponent } from './countdown/countdown.component';
 import { FormsModule } from '@angular/forms';
+import { LocalTimeComponent } from './local-time/local-time.component';
 
 @NgModule({
   imports: [
@@ -15,7 +16,8 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     UnderConstructionComponent,
     ErrorNotFoundComponent,
-    CountdownComponent
+    CountdownComponent,
+    LocalTimeComponent
   ],
   exports: [
     UnderConstructionComponent,
