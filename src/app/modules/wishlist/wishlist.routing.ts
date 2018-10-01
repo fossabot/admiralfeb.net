@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MainComponent } from './main/main.component';
+import { MainComponent } from './_main/main.component';
 import { WishlistComponent } from './wishlist.component';
 import { ClothingComponent } from './clothing/clothing.component';
 import { VideoComponent } from './video/video.component';
@@ -11,7 +11,7 @@ import { HomeComponent } from './home/home.component';
 
 const wishlistRoutes: Routes = [
   {
-    path: '.', component: WishlistComponent,
+    path: '_', component: WishlistComponent,
     children: [
       { path: 'main', component: MainComponent },
       { path: 'home', component: HomeComponent },
@@ -23,7 +23,7 @@ const wishlistRoutes: Routes = [
       { path: '', redirectTo: 'main', pathMatch: 'full' }
     ]
   },
-  { path: '', redirectTo: '.', pathMatch: 'full' },
+  { path: '', redirectTo: '_', pathMatch: 'full' },
 ];
 
 @NgModule({
