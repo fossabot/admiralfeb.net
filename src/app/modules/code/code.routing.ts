@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { MainComponent } from './main/main.component';
+import { MainComponent } from './_main/main.component';
 import { CodeComponent } from './code.component';
 
 const coderoutes: Routes = [
   {
-    path: '.', component: CodeComponent,
+    path: '_', component: CodeComponent,
     children: [
       { path: 'main', component: MainComponent},
       { path: '', redirectTo: 'main', pathMatch: 'full'}
     ]
   },
-  { path: '', redirectTo: '.', pathMatch: 'full' },
+  { path: '', redirectTo: '_', pathMatch: 'full' },
 ];
 
 @NgModule({
