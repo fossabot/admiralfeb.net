@@ -5,7 +5,7 @@ import { RouterModule } from '@angular/router';
 import { ErrorNotFoundComponent } from './error-not-found/error-not-found.component';
 import { CountdownComponent } from './countdown/countdown.component';
 import { FormsModule } from '@angular/forms';
-import { LocalTimeComponent } from './local-time/local-time.component';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   imports: [
@@ -17,12 +17,12 @@ import { LocalTimeComponent } from './local-time/local-time.component';
     UnderConstructionComponent,
     ErrorNotFoundComponent,
     CountdownComponent,
-    LocalTimeComponent
+    LoaderComponent
   ],
   exports: [
     UnderConstructionComponent,
     CountdownComponent,
-    LocalTimeComponent
+    LoaderComponent
   ]
 })
 export class SharedModule { }
