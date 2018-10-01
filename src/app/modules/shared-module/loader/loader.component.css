@@ -1,5 +1,5 @@
 .loader {
-    border: 16px solid white;
+    border: 16px solid transparent;
     border-top: 16px solid rgb(163, 73, 164);
     border-radius: 50%;
     width: 120px;

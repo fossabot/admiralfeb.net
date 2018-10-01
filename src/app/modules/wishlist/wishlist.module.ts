@@ -5,7 +5,7 @@ import { WishlistRoutingModule } from './wishlist.routing';
 import { SharedModule } from '../shared-module/shared-module.module';
 
 import { WishlistComponent } from './wishlist.component';
-import { MainComponent } from './main/main.component';
+import { MainComponent } from './_main/main.component';
 import { HomeComponent } from './home/home.component';
 import { ClothingComponent } from './clothing/clothing.component';
 import { MoneyComponent } from './money/money.component';
