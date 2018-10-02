@@ -5,10 +5,14 @@
   margin-bottom: 0;
   border-bottom: 0;
 }
+.container {
+  justify-content: flex-start;
+}
 
 .navbar img {
   float: left;
   display: block;
+  margin-right: 1em;
   width: 51px
 }
 
@@ -21,6 +25,7 @@
   padding: 15px;
   text-decoration: none;
   font-size: 15px;
+  margin: 0;
 }
 
 .navbar a:hover,

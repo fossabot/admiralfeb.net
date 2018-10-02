@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Title } from '@angular/platform-browser';
+import { Router, ActivatedRoute } from '@angular/router';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-wishlist',
@@ -14,6 +16,13 @@ export class WishlistComponent implements OnInit {
 
   ngOnInit() {
     this.titleService.setTitle(this.title);
+    this.initHamburger();
   }
 
+  initHamburger() {
+    const mgn = $('#sidebar').attr('margin');
+  }
+  hamburger() {
+    $('#sidebar').toggleClass('active');
+  }
 }
