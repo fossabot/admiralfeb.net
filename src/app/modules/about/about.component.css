@@ -1,34 +1,13 @@
-img {
-    border: 5px solid white;
-    width: 100%;
-    display: inline-block;
+h1 {
+  text-align: center;
 }
-h2 {
-    margin-bottom: 3px;
-    color:blueviolet;
-}
-.col{
-    float: left;
-    padding: 10px;
 
+h2 {
+  margin-bottom: 3px;
+  color: blueviolet;
 }
-.left{
-    width: 25%;
-    margin: 10px;
-}
-.left p {
-    margin: 0.5em;
-}
-.right{
-    width: 75%;
-}
-.subtitle{
-    margin: 5px;
-    color: darkslateblue;
-}
-.subtitle .general{
-    text-indent: 10px;
-}
-.subtitle span{
-    font-weight: bold;
+
+.subtitle {
+  margin: 5px;
+  color: darkslateblue;
 }
