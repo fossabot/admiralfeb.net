@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from './profile.service';
-import { Welcome, Entry } from './profile';
+import { Convert, Welcome, Entry } from './profile';
+import { CastExpr } from '@angular/compiler';
 
 
 @Component({
@@ -15,9 +16,9 @@ export class ProfileComponent implements OnInit {
   constructor(private profileService: ProfileService) { }
 
   ngOnInit() {
-    this.profileService.getProfileJson('Zachary@admiralfeb.net').subscribe((entries: Welcome) => {
-      const doo = entries[0];
-      alert(doo.id);
+    this.profileService.getProfileJson('Zachary@admiralfeb.net').subscribe((entries) => {
+      const x = <Welcome>entries;
+      this.profile = x.entry.shift();
     }
     );
   }
