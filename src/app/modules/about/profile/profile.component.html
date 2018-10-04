@@ -1,6 +1,6 @@
-<div class="jumbotron">
+<div class="jumbotron" *ngIf="profile">
   <p>
-    profile id = {{profile.id}}
-    profile name = {{ profile.displayName}}
+    profile id = {{ profile.id }} <br>
+    profile name = {{ profile.displayName }}
   </p>
 </div>

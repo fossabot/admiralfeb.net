@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProfileService } from './profile.service';
-import { Convert, Welcome, Entry } from './profile';
-import { CastExpr } from '@angular/compiler';
+import { Welcome, Entry } from './profile';
 
 
 @Component({
