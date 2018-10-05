@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 import { WishlistRoutingModule } from './wishlist.routing';
 import { SharedModule } from '../shared-module/shared-module.module';
@@ -16,6 +17,7 @@ import { VideoComponent } from './video/video.component';
 @NgModule({
   imports: [
     CommonModule,
+    RouterModule,
     WishlistRoutingModule,
     SharedModule
   ],
