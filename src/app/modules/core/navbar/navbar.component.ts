@@ -16,9 +16,7 @@ export class NavbarComponent implements OnInit {
       console.log(event);
       if (event instanceof NavigationEnd) {
         const location = event.urlAfterRedirects;
-        if (location.toUpperCase().includes('WISHLIST')) {
-          this.onClick('wishlist');
-        } else if (location.toUpperCase().includes('CODE')) {
+        if (location.toUpperCase().includes('CODE')) {
           this.onClick('code');
         } else {
           this.onClick('home');
@@ -34,18 +32,13 @@ export class NavbarComponent implements OnInit {
   onClick(target: string) {
     switch (target.toUpperCase()) {
       case 'HOME': {
-        $('.wishlist').slideUp();
-        $('.code').slideUp();
-        break;
-      }
-      case 'WISHLIST': {
-        $('.wishlist').slideDown();
-        $('.code').slideUp();
+        $('#wishlist').slideUp();
+        $('#code').slideUp();
         break;
       }
       case 'CODE': {
-        $('.code').slideDown();
-        $('.wishlist').slideUp();
+        $('#code').slideDown();
+        $('#wishlist').slideUp();
         break;
       }
       default:

@@ -1,0 +1,9 @@
+<div id="main" class="jumbotron">
+  <h3 class="text-center">Welcome to Zachary's Code page</h3>
+  <h4 class="text-center">This page will showcase different apps that Zachary has made for his
+    enjoyment.</h4>
+  <h3>Code to come:</h3>
+  <ul *ngFor="let project of codeinProcess">
+    <li><span class="title">{{project.title}}</span> - {{project.description}}</li>
+  </ul>
+</div>

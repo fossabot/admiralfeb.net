@@ -1,2 +1,51 @@
-<h1>Zachary's Wishlist</h1>
-<div class="container"><router-outlet></router-outlet></div>
+<div class="container header">
+  <div class="row d-flex align-items-center">
+    <div class="col-sm-1 d-flex align-items-center">
+      <div class="hamburger" (click)="hamburger()" data-toggle="tooltip" data-placement="right" title="Show/Hide the Navigation Panel">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+      </div>
+    </div>
+    <div class="col">
+      <h1>Zachary's Wishlist</h1>
+    </div>
+  </div>
+</div>
+
+
+<div class="wrapper">
+  <nav id="sidebar" class="nav flex-column">
+    <div class="sidebar-header">
+      <h3>Navigation</h3>
+    </div>
+
+    <ul class="nav nav-pills">
+      <li>
+        <a class="linkText" routerLink="main" routerLinkActive="active">Wishlist Home</a>
+      </li>
+      <!-- <li>
+        <a class="linkText" routerLink="home" routerLinkActive="active">Home stuff</a>
+      </li>
+      <li>
+        <a class="linkText" routerLink="clothing" routerLinkActive="active">Clothing and Related</a>
+      </li>
+      <li>
+        <a class="linkText" routerLink="money" routerLinkActive="active">Gift Cards and Money</a>
+      </li>
+      <li>
+        <a class="linkText" routerLink="other" routerLinkActive="active">Other</a>
+      </li>
+      <li>
+        <a class="linkText" routerLink="tech" routerLinkActive="active">Technology</a>
+      </li>
+      <li>
+        <a class="linkText" routerLink="video" routerLinkActive="active">Video</a>
+      </li> -->
+    </ul>
+  </nav>
+
+  <div id="content" class="container">
+    <router-outlet></router-outlet>
+  </div>
+</div>
