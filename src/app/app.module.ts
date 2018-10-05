@@ -7,7 +7,6 @@ import { CoreModule } from './modules/core/core.module';
 import { SharedModule } from './modules/shared-module/shared-module.module';
 
 import { AppComponent } from './app.component';
-import { AboutModule } from './modules/about/about.module';
 
 @NgModule({
     imports: [
@@ -15,7 +14,6 @@ import { AboutModule } from './modules/about/about.module';
         NgbModule.forRoot(),
         CoreModule,
         SharedModule,
-        AboutModule,
         routing
     ],
     declarations: [

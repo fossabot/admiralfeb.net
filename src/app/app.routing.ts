@@ -7,11 +7,11 @@ import { ErrorNotFoundComponent } from './modules/shared-module/error-not-found/
 
 const routes: Routes = [
   { path: 'home', component: CoreComponent },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'underconstruction', component: UnderConstructionComponent },
   { path: 'wishlist', loadChildren: './modules/wishlist/wishlist.module#WishlistModule' },
   { path: 'about', loadChildren: './modules/about/about.module#AboutModule' },
   { path: 'code', loadChildren: './modules/code/code.module#CodeModule'},
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: '**', component: ErrorNotFoundComponent},
 ];
 
