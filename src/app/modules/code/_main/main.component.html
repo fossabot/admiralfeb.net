@@ -4,6 +4,6 @@
     enjoyment.</h4>
   <h3>Code to come:</h3>
   <ul *ngFor="let project of codeinProcess">
-    <li><span class="title">{{project.title}}</span> - {{project.description}}</li>
+    <li><span class="title">{{project.title}}</span> - <span class="status" [class]="project.statusClass">{{project.status}}</span> - {{project.description}}</li>
   </ul>
 </div>

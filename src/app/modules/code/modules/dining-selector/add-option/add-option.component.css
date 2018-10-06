@@ -1,0 +1,29 @@
+
+.header {
+    background-color:blue;
+    width: 10em;
+    text-decoration: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    text-align: center;
+    color: white;
+}
+.header:active{
+    color:blue
+}
+.header:hover{
+    background-color: orangered;
+}
+.subsection{
+    text-indent: .75em;
+}
+.wrongInput{
+    display: none;
+}
+.alertUser{
+    background-color: pink !important;
+    color: red !important;
+}
+.input{
+    width: 10em;
+}

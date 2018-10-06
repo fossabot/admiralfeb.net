@@ -6,6 +6,7 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0 !important;
   padding: 0;
+  --colorZ: rgb(163, 73, 164);
 }
 
 h1 {
@@ -41,7 +42,7 @@ body {
 
 .navbar a.active,
 .nav a.active {
-  background-color: rgb(163, 73, 164);
+  background-color: var(--colorZ);
   color: white;
 }
 
