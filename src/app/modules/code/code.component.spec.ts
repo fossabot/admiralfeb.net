@@ -2,6 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CodeComponent } from './code.component';
 import { RouterTestingModule } from '@angular/router/testing';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 describe('CodeComponent', () => {
   let component: CodeComponent;
@@ -9,10 +10,10 @@ describe('CodeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule],
-      declarations: [ CodeComponent ]
+      imports: [RouterTestingModule, MatTooltipModule],
+      declarations: [CodeComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

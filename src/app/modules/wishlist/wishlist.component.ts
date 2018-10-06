@@ -17,12 +17,8 @@ export class WishlistComponent implements OnInit {
 
   ngOnInit() {
     this.titleService.setTitle(this.title);
-    this.initHamburger();
   }
 
-  initHamburger() {
-    const mgn = $('#sidebar').attr('margin');
-  }
   hamburger() {
     $('#sidebar').toggleClass('active');
   }

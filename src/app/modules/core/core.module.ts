@@ -5,7 +5,6 @@ import { RouterModule } from '@angular/router';
 
 import { CoreComponent } from './core.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { CodeNavComponent } from './navbar/code-nav/code-nav.component';
 
 @NgModule({
   imports: [
@@ -16,12 +15,10 @@ import { CodeNavComponent } from './navbar/code-nav/code-nav.component';
   declarations: [
     CoreComponent,
     NavbarComponent,
-    CodeNavComponent,
   ],
   exports: [
     CoreComponent,
     NavbarComponent,
-    CodeNavComponent,
   ]
 })
 export class CoreModule { }
