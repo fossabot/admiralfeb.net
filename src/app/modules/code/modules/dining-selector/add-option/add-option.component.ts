@@ -1,5 +1,14 @@
 import { Component, OnInit, Injectable, Input, Output, EventEmitter } from '@angular/core';
+import { FormControl, Validators, FormGroupDirective, NgForm } from '@angular/forms';
 import * as $ from 'jquery';
+import { ErrorStateMatcher } from '@angular/material/core';
+
+export class MyErrorStateMatcher implements ErrorStateMatcher {
+  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
+    const isSubmitted = form && form.submitted;
+    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
+  }
+}
 
 @Component({
   selector: 'app-add-option',
@@ -7,9 +16,16 @@ import * as $ from 'jquery';
   styleUrls: ['./add-option.component.css']
 })
 export class AddOptionComponent implements OnInit {
+  @Input() duplicateValue: boolean;
   @Output() received = new EventEmitter<string>();
-  nothingEntered = 'Nothing was entered. You don\'t want to eat?';
   option = '';
+
+  optionFormControl = new FormControl('', [
+    Validators.required,
+  ]);
+  matcher = new MyErrorStateMatcher();
+  nothingEntered = `Nothing is entered. You don't want to eat?`;
+
   constructor() { }
 
   ngOnInit() {
@@ -18,45 +34,23 @@ export class AddOptionComponent implements OnInit {
   }
 
   attachEvents() {
-    $('#btnToggle').click(this.toggleSection);
     $('#btnnewOption').click(this.onSubmit.bind(this));
     $('#txtnewOption').keyup(function (e) {
       if (e.key === 'Enter') {
-        this.onSubmit().bind(this);
+        this.onSubmit();
       }
     }.bind(this));
-  }
-
-
-  toggleSection(): void {
-    $('.newOption').slideToggle();
   }
 
   add(input: string): void {
     if (input) {
       this.received.emit(input);
-      $('.wrongInput').slideUp();
-    } else {
-      $('.wrongInput').slideDown();
-      let i = 0;
-      const inv = setInterval(() => {
-        $('#txtnewOption').toggleClass('alertUser');
-        i++;
-        if (i > 7) {
-          clearInterval(inv);
-          $('#txtnewOption').removeClass('alertUser');
-        }
-      }, 200);
     }
   }
 
-
   onSubmit() {
-    // tslint:disable-next-line:prefer-const
-    let txtElement = $('#txtnewOption');
-    // tslint:disable-next-line:prefer-const
-    let value = $(txtElement).val();
-    $(txtElement).val('');
+    const value = this.optionFormControl.value;
+    this.optionFormControl.reset();
     this.add(value);
   }
 }

@@ -15,7 +15,7 @@ export class DiningOptionComponent implements OnInit {
   constructor(
     private diningService: DiningService,
     private messageService: MessageService
-    ) { }
+  ) { }
 
   ngOnInit() {
     this.getOptions();
@@ -42,7 +42,6 @@ export class DiningOptionComponent implements OnInit {
   }
 
   addOption(value: string): void {
-    $('#txtnewOption').css('background-color', '');
     if (this.diningOptions.find(x => x.toUpperCase() === value.toUpperCase())) {
       this.messageService.add(`${value} already exists. I can't add it again...`);
     } else {

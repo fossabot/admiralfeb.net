@@ -1,11 +1,21 @@
- <button class="header" id="btnToggle" > Add an Option </button>
-<p></p>
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Add Option
+      </mat-panel-title>
+      <mat-panel-description>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
 
-<div class="newOption">
-  <label>What option would you like to add?</label>
-  <div class="input">
-    <input id="txtnewOption" #newOption type="text">
-    <p class="wrongInput alertUser">{{nothingEntered}}</p>
-  </div>
-  <button id="btnnewOption">Add</button>
-</div>
+    <mat-form-field>
+      <mat-label>
+        Option to Add
+      </mat-label>
+      <input id="txtnewOption" matInput #newOption placeholder="Option" [formControl]="optionFormControl" [errorStateMatcher]="matcher">
+      <mat-error *ngIf="optionFormControl.hasError('required')">
+        {{nothingEntered}}
+      </mat-error>
+    </mat-form-field>
+    <button mat-button id="btnnewOption">Add</button>
+  </mat-expansion-panel>
