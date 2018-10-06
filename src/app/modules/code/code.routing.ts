@@ -7,9 +7,9 @@ const coderoutes: Routes = [
   {
     path: '_', component: CodeComponent,
     children: [
-      { path: 'main', component: MainComponent},
-      { path: 'dining_selector', loadChildren: './modules/dining-selector/dining-selector.module#DiningSelectorModule'},
-      { path: '', redirectTo: 'main', pathMatch: 'full'}
+      { path: 'main', component: MainComponent },
+      { path: 'dining_selector', loadChildren: './modules/dining-selector/dining-selector.module#DiningSelectorModule' },
+      { path: '', redirectTo: 'main', pathMatch: 'full' }
     ]
   },
   { path: '', redirectTo: '_', pathMatch: 'full' },

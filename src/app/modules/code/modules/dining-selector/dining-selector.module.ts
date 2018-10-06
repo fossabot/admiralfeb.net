@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import {MatButtonModule} from '@angular/material/button';
 import { DiningSelectorRoutingModule } from './dining-selector.routing';
 
 import { DiningSelectorComponent } from './dining-selector.component';
@@ -10,6 +11,7 @@ import { MessagesComponent } from './messages/messages.component';
 @NgModule({
   imports: [
     CommonModule,
+    MatButtonModule,
     DiningSelectorRoutingModule
   ],
   declarations: [

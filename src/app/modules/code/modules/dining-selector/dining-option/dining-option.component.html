@@ -1,10 +1,12 @@
 <div class="container">
-  <div class="list" *ngFor="let option of diningOptions">
-    <div class="list-item"  >
-      {{option}} <button class="delete" (click)="deleteOption(option)">x</button>
-    </div>
-  </div>
-  <button (click)="selectOption()">Select an Option</button>
+  <ul >
+    <li class="mb-0" *ngFor="let option of diningOptions">
+      {{option}}<button mat-icon-button (click)="deleteOption(option)"><i class="material-icons">
+          delete
+        </i></button>
+    </li>
+  </ul>
+  <button mat-raised-button color="primary" (click)="selectOption()">Select an Option</button>
   <div *ngIf="selectedOption">
     <p>Your selected option is: {{selectedOption}}</p>
   </div>
