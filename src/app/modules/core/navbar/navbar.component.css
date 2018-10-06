@@ -5,22 +5,32 @@
   margin-bottom: 0;
   border-bottom: 0;
 }
+.container {
+  justify-content: flex-start;
+}
 
 .navbar img {
   float: left;
   display: block;
-  width: 51px
+  margin-right: 1em;
+  width: 52px
+}
+.navbar .linkImage {
+  width: 52px;
+  height: auto;
 }
 
-.navbar .linkText {
+.navbar .nav-link {
   background-color: #333;
   float: left;
   display: block;
   color: #f2f2f2;
   text-align: center;
-  padding: 15px;
+  padding: 10px;
   text-decoration: none;
   font-size: 15px;
+  margin: 0;
+  margin-left: 1em;
 }
 
 .navbar a:hover,
