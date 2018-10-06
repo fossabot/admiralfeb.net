@@ -3,6 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { WishlistComponent } from './wishlist.component';
 import { SharedModule } from '../shared-module/shared-module.module';
 import { RouterTestingModule } from '@angular/router/testing';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 describe('WishlistComponent', () => {
   let component: WishlistComponent;
@@ -11,7 +12,7 @@ describe('WishlistComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [WishlistComponent],
-      imports: [SharedModule, RouterTestingModule]
+      imports: [SharedModule, RouterTestingModule, MatTooltipModule]
     })
       .compileComponents();
   }));
