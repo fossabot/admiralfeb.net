@@ -10,18 +10,15 @@ import * as $ from 'jquery';
 })
 export class WishlistComponent implements OnInit {
   title = `Admiralfeb's Wishlist`;
+  tipNavButton = 'Show/Hide the Navigation Panel';
   constructor(
     private titleService: Title
   ) { }
 
   ngOnInit() {
     this.titleService.setTitle(this.title);
-    this.initHamburger();
   }
 
-  initHamburger() {
-    const mgn = $('#sidebar').attr('margin');
-  }
   hamburger() {
     $('#sidebar').toggleClass('active');
   }
