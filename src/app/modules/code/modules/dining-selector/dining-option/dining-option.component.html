@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="list" *ngFor="let option of diningOptions">
+    <div class="list-item"  >
+      {{option}} <button class="delete" (click)="deleteOption(option)">x</button>
+    </div>
+  </div>
+  <button (click)="selectOption()">Select an Option</button>
+  <div *ngIf="selectedOption">
+    <p>Your selected option is: {{selectedOption}}</p>
+  </div>
+  <p></p>
+  <app-add-option #addition (received)="addOption($event)"></app-add-option>
+</div>
