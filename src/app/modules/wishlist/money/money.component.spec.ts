@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
+import { SharedModule } from '../../shared-module/shared-module.module';
 import { MoneyComponent } from './money.component';
 
 describe('MoneyComponent', () => {
@@ -8,9 +9,10 @@ describe('MoneyComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MoneyComponent ]
+      imports: [SharedModule],
+      declarations: [MoneyComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

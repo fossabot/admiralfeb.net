@@ -1,0 +1,15 @@
+<div class="container">
+  <ul >
+    <li class="mb-0" *ngFor="let option of diningOptions">
+      {{option}}<button mat-icon-button (click)="deleteOption(option)"><i class="material-icons">
+          delete
+        </i></button>
+    </li>
+  </ul>
+  <button mat-raised-button color="primary" (click)="selectOption()">Select an Option</button>
+  <div *ngIf="selectedOption">
+    <p>Your selected option is: {{selectedOption}}</p>
+  </div>
+  <p></p>
+  <app-add-option #addition (received)="addOption($event)"></app-add-option>
+</div>
