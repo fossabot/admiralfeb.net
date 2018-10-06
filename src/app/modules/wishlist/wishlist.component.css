@@ -2,84 +2,26 @@ h1 {
   text-align: center;
 }
 
-.header {
-  margin-left: 0;
-}
-
 .wrapper {
   display: flex;
   align-items: stretch;
-}
-
-.hamburger {
-  display: inline-block;
-  cursor: pointer;
-  margin: 0 auto;
-  width: 100%
-}
-
-.vertical-center {
-  margin: 0 auto;
-}
-
-.bar1,
-.bar2,
-.bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: #333;
-  margin: 6px auto;
-  transition: 0.4s;
-}
-
-/* Rotate first bar */
-.ex .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
-}
-
-/* Fade out the second bar */
-.ex .bar2 {
-  opacity: 0;
-}
-
-/* Rotate last bar */
-.ex .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px);
 }
 
 .nav li {
   width: 100%;
 }
 
-button {
-  background-color: #333;
-  border: none;
-  position: absolute;
-  top: 75px;
-  left: 10px;
-}
-
-button:hover {
-  background-color: rgb(163, 73, 164) !important;
-}
-
-button:focus {
-  background-color: #333;
-}
-
 #sidebar {
   color: #f2f2f2;
-  min-width: 250px;
-  max-width: 250px;
+  min-width: 200px;
+  max-width: 200px;
   min-height: 100vh;
   margin-left: 0;
   transition: all 0.5s linear;
 }
 
 #sidebar.active {
-  margin-left: -250px;
+  margin-left: -200px;
 }
 
 .nav {
@@ -100,7 +42,7 @@ button:focus {
   margin-left: 0;
 }
 
-.nav .linkText {
+.nav .nav-link {
   background-color: #333;
   float: left;
   display: block;
@@ -124,7 +66,7 @@ button:focus {
 
 @media (max-width: 768px) {
   #sidebar {
-    margin-left: -250px;
+    margin-left: -200px;
   }
 
   #sidebar.active {

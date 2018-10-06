@@ -10,6 +10,7 @@ import * as $ from 'jquery';
 })
 export class WishlistComponent implements OnInit {
   title = `Admiralfeb's Wishlist`;
+  tipNavButton = 'Show/Hide the Navigation Panel';
   constructor(
     private titleService: Title
   ) { }
