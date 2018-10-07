@@ -1,9 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MatButtonModule } from '@angular/material/button';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { MatInputModule } from '@angular/material/input';
-import { FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { SharedModule } from '../../../../shared-module/shared-module.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AddOptionComponent } from './add-option.component';
@@ -15,11 +12,7 @@ describe('AddOptionComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [
-        MatButtonModule,
-        MatExpansionModule,
-        MatInputModule,
-        FormsModule,
-        ReactiveFormsModule,
+        SharedModule,
         NoopAnimationsModule
       ],
       declarations: [ AddOptionComponent ]
