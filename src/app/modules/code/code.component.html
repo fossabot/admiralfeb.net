@@ -1,4 +1,28 @@
-<h1>Zachary's Code</h1>
-<div class="container">
-  <router-outlet></router-outlet>
+<div class="row d-flex align-items-center">
+  <div class="col-sm-1 h-100 d-flex align-items-center">
+    <i class="material-icons md-36 hamburger" (click)="hamburger()" [matTooltip]="tipNavButton" matTooltipPosition="after">
+      menu
+    </i>
+  </div>
+  <div class="col">
+    <h1>Zachary's Code</h1>
+  </div>
+</div>
+<div class="wrapper">
+  <nav id="sidebar" class="nav flex-column">
+    <div class="sidebar-header text-center">
+      <h3>Navigation</h3>
+    </div>
+
+    <ul class="nav nav-pills">
+      <li>
+        <a class="nav-link" routerLink="main" routerLinkActive="active">Code Home</a>
+      </li><li>
+        <a class="nav-link" routerLink="dining_selector" routerLinkActive="active">Dining Selector</a>
+      </li>
+    </ul>
+  </nav>
+  <div id="content" class="container">
+    <router-outlet></router-outlet>
+  </div>
 </div>

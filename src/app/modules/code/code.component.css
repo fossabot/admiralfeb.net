@@ -1,3 +1,75 @@
 h1 {
     text-align: center;
 }
+
+.wrapper {
+    display: flex;
+    align-items: stretch;
+  }
+  
+  .nav li {
+    width: 100%;
+  }
+  
+  #sidebar {
+    color: #f2f2f2;
+    min-width: 200px;
+    max-width: 200px;
+    min-height: 100vh;
+    margin-left: 0;
+    transition: all 0.5s linear;
+  }
+  
+  #sidebar.active {
+    margin-left: -200px;
+  }
+  
+  .nav {
+    background-color: #333;
+    color: #f2f2f2;
+    overflow: hidden;
+    width: 100%;
+    padding: 3px;
+    height: auto;
+    min-height: auto;
+    border-radius: 0;
+    border: 0;
+    padding-bottom: 0;
+    margin: 0;
+  }
+  
+  .nav li {
+    margin-left: 0;
+  }
+  
+  .nav .nav-link {
+    background-color: #333;
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: left;
+    padding: 5px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    width: 100%;
+  }
+  
+  .nav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .nav a.active {
+    background-color: rgb(163, 73, 164);
+    color: white;
+  }
+  
+  @media (max-width: 768px) {
+    #sidebar {
+      margin-left: -200px;
+    }
+  
+    #sidebar.active {
+      margin-left: 0;
+    }
+  }

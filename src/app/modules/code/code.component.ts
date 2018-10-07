@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Title} from '@angular/platform-browser';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-code',
@@ -6,10 +8,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./code.component.css']
 })
 export class CodeComponent implements OnInit {
+  tipNavButton = 'Show/Hide the Navigation Panel';
+  title = `Admiralfeb's Code`;
 
-  constructor() { }
+  constructor(private titleService: Title) { }
 
   ngOnInit() {
+    this.titleService.setTitle(this.title);
   }
 
+  hamburger() {
+    $('#sidebar').toggleClass('active');
+  }
 }

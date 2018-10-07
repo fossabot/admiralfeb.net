@@ -1,28 +1,41 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UnderConstructionComponent } from './under-construction/under-construction.component';
 import { RouterModule } from '@angular/router';
-import { ErrorNotFoundComponent } from './error-not-found/error-not-found.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { MaterialModule } from './material/material.module';
+
 import { CountdownComponent } from './countdown/countdown.component';
-import { FormsModule } from '@angular/forms';
-import { LoaderComponent } from './loader/loader.component';
+import { ErrorNotFoundComponent } from './error-not-found/error-not-found.component';
+import { UnderConstructionComponent } from './under-construction/under-construction.component';
+import { MessageDialogComponent } from './message-dialog/message-dialog.component';
 
 @NgModule({
   imports: [
     CommonModule,
     RouterModule,
     FormsModule,
+    ReactiveFormsModule,
+    MaterialModule,
   ],
   declarations: [
-    UnderConstructionComponent,
-    ErrorNotFoundComponent,
     CountdownComponent,
-    LoaderComponent
+    ErrorNotFoundComponent,
+    UnderConstructionComponent,
+    MessageDialogComponent,
+  ],
+  entryComponents: [
+    MessageDialogComponent
   ],
   exports: [
-    UnderConstructionComponent,
+    FormsModule,
+    ReactiveFormsModule,
+
+    MaterialModule,
+
     CountdownComponent,
-    LoaderComponent
+    ErrorNotFoundComponent,
+    UnderConstructionComponent,
   ]
 })
 export class SharedModule { }

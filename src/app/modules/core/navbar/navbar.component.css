@@ -20,7 +20,7 @@
   height: auto;
 }
 
-.navbar .linkText {
+.navbar .nav-link {
   background-color: #333;
   float: left;
   display: block;

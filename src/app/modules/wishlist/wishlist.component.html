@@ -1,47 +1,43 @@
-<div class="container header">
-  <div class="row d-flex align-items-center">
-    <div class="col-sm-1 d-flex align-items-center">
-      <div class="hamburger" (click)="hamburger()" data-toggle="tooltip" data-placement="right" title="Show/Hide the Navigation Panel">
-        <div class="bar1"></div>
-        <div class="bar2"></div>
-        <div class="bar3"></div>
-      </div>
-    </div>
-    <div class="col">
-      <h1>Zachary's Wishlist</h1>
-    </div>
+<div class="row d-flex align-items-center">
+  <div class="col-sm-1 h-100 d-flex align-items-center">
+    <i class="material-icons md-36 hamburger" (click)="hamburger()" [matTooltip]="tipNavButton" matTooltipPosition="after">
+      menu
+    </i>
+  </div>
+  <div class="col">
+    <h1>Zachary's Wishlist</h1>
   </div>
 </div>
 
 
 <div class="wrapper">
   <nav id="sidebar" class="nav flex-column">
-    <div class="sidebar-header">
+    <div class="sidebar-header text-center">
       <h3>Navigation</h3>
     </div>
 
     <ul class="nav nav-pills">
       <li>
-        <a class="linkText" routerLink="main" routerLinkActive="active">Wishlist Home</a>
-      </li>
-      <!-- <li>
-        <a class="linkText" routerLink="home" routerLinkActive="active">Home stuff</a>
+        <a class="nav-link" routerLink="main" routerLinkActive="active">Wishlist Home</a>
       </li>
       <li>
-        <a class="linkText" routerLink="clothing" routerLinkActive="active">Clothing and Related</a>
+        <a class="nav-link" routerLink="clothing" routerLinkActive="active">Clothing</a>
       </li>
       <li>
-        <a class="linkText" routerLink="money" routerLinkActive="active">Gift Cards and Money</a>
+        <a class="nav-link" routerLink="home" routerLinkActive="active">Home stuff</a>
       </li>
       <li>
-        <a class="linkText" routerLink="other" routerLinkActive="active">Other</a>
+        <a class="nav-link" routerLink="money" routerLinkActive="active">Money and Gift Cards</a>
       </li>
       <li>
-        <a class="linkText" routerLink="tech" routerLinkActive="active">Technology</a>
+        <a class="nav-link" routerLink="other" routerLinkActive="active">Other</a>
       </li>
       <li>
-        <a class="linkText" routerLink="video" routerLinkActive="active">Video</a>
-      </li> -->
+        <a class="nav-link" routerLink="tech" routerLinkActive="active">Technology</a>
+      </li>
+      <li>
+        <a class="nav-link" routerLink="video" routerLinkActive="active">Video</a>
+      </li>
     </ul>
   </nav>
 
