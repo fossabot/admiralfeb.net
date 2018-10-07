@@ -10,6 +10,7 @@ import { switchMap, map } from 'rxjs/operators';
 export class CountdownComponent implements OnInit, OnDestroy {
   @Input() inputDate: string;
   @Output() message: string;
+  @Output() passed = false;
 
   private future: Date;
   private futureString: string;
@@ -42,6 +43,7 @@ export class CountdownComponent implements OnInit, OnDestroy {
     this.future = new Date(this.futureString);
     this.counter$ = interval(1000).pipe(
       map((x) => {
+        this.passed = (this.future.getTime() < new Date().getTime()) ? true : false;
         return Math.floor((this.future.getTime() - new Date().getTime()) / 1000);
       }));
     this.subscription = this.counter$.subscribe((x) => {
