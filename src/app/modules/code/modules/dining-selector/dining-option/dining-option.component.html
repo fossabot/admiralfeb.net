@@ -1,5 +1,5 @@
 <div class="container">
-  <ul >
+  <ul>
     <li class="mb-0" *ngFor="let option of diningOptions">
       {{option}}<button mat-icon-button (click)="deleteOption(option)"><i class="material-icons">
           delete
@@ -11,5 +11,25 @@
     <p>Your selected option is: {{selectedOption}}</p>
   </div>
   <p></p>
-  <app-add-option #addition (received)="addOption($event)"></app-add-option>
+  <mat-expansion-panel (closed)="resetEntry()">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Add Option
+      </mat-panel-title>
+      <mat-panel-description>
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <mat-form-field>
+      <mat-label>
+        Option to Add
+      </mat-label>
+      <input id="txtnewOption" matInput #newOption placeholder="Option" [formControl]="optionFormControl"
+        [errorStateMatcher]="matcher">
+      <mat-error *ngIf="optionFormControl.hasError('required')">
+        {{nothingEntered}}
+      </mat-error>
+    </mat-form-field>
+    <button mat-button id="btnnewOption">Add</button>
+  </mat-expansion-panel>
 </div>
