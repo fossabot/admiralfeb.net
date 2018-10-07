@@ -47,7 +47,7 @@ describe('MessageDialogComponent', () => {
     const button = overlayContainerElement.querySelector('button');
 
     expect(h2.textContent).toBe('User cannot be saved without an email');
-    expect(button.textContent).toBe('Okay');
+    expect(button.textContent).toBe('Close');
   });
 });
 

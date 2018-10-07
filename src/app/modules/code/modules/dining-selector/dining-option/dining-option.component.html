@@ -1,4 +1,5 @@
 <div class="container">
+  <h4>Options to choose from:</h4>
   <ul>
     <li class="mb-0" *ngFor="let option of diningOptions">
       {{option}}<button mat-icon-button (click)="deleteOption(option)"><i class="material-icons">
@@ -7,6 +8,7 @@
     </li>
   </ul>
   <button mat-raised-button color="primary" (click)="selectOption()">Select an Option</button>
+  <button mat-raised-button color="accent" class="ml-1" (click)="defaultOptions()">Default Options</button>
   <div *ngIf="selectedOption">
     <p>Your selected option is: {{selectedOption}}</p>
   </div>
@@ -16,8 +18,6 @@
       <mat-panel-title>
         Add Option
       </mat-panel-title>
-      <mat-panel-description>
-      </mat-panel-description>
     </mat-expansion-panel-header>
 
     <mat-form-field>

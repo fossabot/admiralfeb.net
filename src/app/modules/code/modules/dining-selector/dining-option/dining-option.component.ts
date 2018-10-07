@@ -60,6 +60,12 @@ export class DiningOptionComponent implements OnInit {
     );
   }
 
+  defaultOptions(): void {
+    this.togglePanels(false);
+    this.diningOptions = new Array();
+    this.getOptions();
+  }
+
   sortOptions(): void {
     this.diningOptions.sort(function (a, b) {
       return a.toLowerCase().localeCompare(b.toLowerCase());
@@ -77,22 +83,55 @@ export class DiningOptionComponent implements OnInit {
   addOption(value: string): void {
     if (value) {
       if (this.diningOptions.find(x => x.toUpperCase() === value.toUpperCase())) {
+        this.togglePanels(false);
         this.messageService.add(`${value} already exists. I can't add it again...`);
+        const dialogRef = this.dialog.open(MessageDialogComponent, {
+          data: {
+            title: 'Already Added',
+            message: `The item '${value}' is already in the list. No duplicates allowed.`
+          }
+        });
+        dialogRef.afterClosed().subscribe(() => {
+          console.log('Dialog closed');
+        });
       } else {
         this.diningOptions.push(value);
         this.messageService.add(`Added: ${value}`);
         this.sortOptions();
       }
+    } else {
+      const dialogRef = this.dialog.open(MessageDialogComponent, {
+        data: {
+          title: 'Nothing Entered',
+          message: this.nothingEntered
+        }
+      });
+      dialogRef.afterClosed().subscribe(() => {
+        console.log('Dialog closed');
+      });
     }
   }
 
   deleteOption(option: string): void {
     this.togglePanels(false);
     this.selectedOption = '';
-    const optionIndex = this.diningOptions.indexOf(option);
-    if (optionIndex !== -1) {
-      this.diningOptions.splice(this.diningOptions.indexOf(option), 1);
-      this.messageService.add(`Deleted: ${option}`);
+    if (this.diningOptions.length > 1) {
+      const optionIndex = this.diningOptions.indexOf(option);
+      if (optionIndex !== -1) {
+        this.diningOptions.splice(this.diningOptions.indexOf(option), 1);
+        this.messageService.add(`Deleted: ${option}`);
+      }
+    } else {
+      const dialogRef = this.dialog.open(MessageDialogComponent, {
+        data: {
+          title: 'Cannot Delete all items',
+          message: `At least one item must be in the list for this application to work.`
+        }
+      });
+      dialogRef.afterClosed().subscribe(() => {
+        console.log('Dialog closed');
+      });
+
     }
   }
 
