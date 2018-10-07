@@ -3,11 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { MatTooltipModule } from '@angular/material/tooltip';
-import { MatButtonModule } from '@angular/material/button';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { MatInputModule } from '@angular/material/input';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MaterialModule } from './material/material.module';
 
 import { CountdownComponent } from './countdown/countdown.component';
 import { ErrorNotFoundComponent } from './error-not-found/error-not-found.component';
@@ -19,12 +15,7 @@ import { UnderConstructionComponent } from './under-construction/under-construct
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-
-    MatButtonModule,
-    MatExpansionModule,
-    MatInputModule,
-    MatProgressSpinnerModule,
-    MatTooltipModule,
+    MaterialModule,
   ],
   declarations: [
     CountdownComponent,
@@ -35,11 +26,7 @@ import { UnderConstructionComponent } from './under-construction/under-construct
     FormsModule,
     ReactiveFormsModule,
 
-    MatButtonModule,
-    MatExpansionModule,
-    MatInputModule,
-    MatProgressSpinnerModule,
-    MatTooltipModule,
+    MaterialModule,
 
     CountdownComponent,
     ErrorNotFoundComponent,
