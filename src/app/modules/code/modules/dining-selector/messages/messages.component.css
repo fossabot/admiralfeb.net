@@ -1,0 +1,20 @@
+.container {
+    padding-top: 10px;
+}
+.messages {
+    display: grid;
+}
+.list {
+    grid-column: auto;
+}
+h2 {
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+button {
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+div{
+    color:gray;
+}
