@@ -9,9 +9,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
-import { UnderConstructionComponent } from './under-construction/under-construction.component';
-import { ErrorNotFoundComponent } from './error-not-found/error-not-found.component';
 import { CountdownComponent } from './countdown/countdown.component';
+import { ErrorNotFoundComponent } from './error-not-found/error-not-found.component';
+import { UnderConstructionComponent } from './under-construction/under-construction.component';
 
 @NgModule({
   imports: [
@@ -19,27 +19,30 @@ import { CountdownComponent } from './countdown/countdown.component';
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    MatTooltipModule,
+
     MatButtonModule,
     MatExpansionModule,
     MatInputModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatTooltipModule,
   ],
   declarations: [
-    UnderConstructionComponent,
-    ErrorNotFoundComponent,
     CountdownComponent,
+    ErrorNotFoundComponent,
+    UnderConstructionComponent,
   ],
   exports: [
-    UnderConstructionComponent,
-    CountdownComponent,
     FormsModule,
     ReactiveFormsModule,
-    MatTooltipModule,
     MatButtonModule,
     MatExpansionModule,
     MatInputModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatTooltipModule,
+
+    CountdownComponent,
+    ErrorNotFoundComponent,
+    UnderConstructionComponent,
   ]
 })
 export class SharedModule { }
