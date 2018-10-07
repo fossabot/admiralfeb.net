@@ -8,6 +8,7 @@ import { MaterialModule } from './material/material.module';
 import { CountdownComponent } from './countdown/countdown.component';
 import { ErrorNotFoundComponent } from './error-not-found/error-not-found.component';
 import { UnderConstructionComponent } from './under-construction/under-construction.component';
+import { MessageDialogComponent } from './message-dialog/message-dialog.component';
 
 @NgModule({
   imports: [
@@ -21,6 +22,10 @@ import { UnderConstructionComponent } from './under-construction/under-construct
     CountdownComponent,
     ErrorNotFoundComponent,
     UnderConstructionComponent,
+    MessageDialogComponent,
+  ],
+  entryComponents: [
+    MessageDialogComponent
   ],
   exports: [
     FormsModule,

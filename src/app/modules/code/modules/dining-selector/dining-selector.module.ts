@@ -6,7 +6,6 @@ import { SharedModule} from '../../../shared-module/shared-module.module';
 
 import { DiningSelectorComponent } from './dining-selector.component';
 import { DiningOptionComponent } from './dining-option/dining-option.component';
-import { AddOptionComponent } from './add-option/add-option.component';
 import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
@@ -18,7 +17,6 @@ import { MessagesComponent } from './messages/messages.component';
   declarations: [
     DiningSelectorComponent,
     DiningOptionComponent,
-    AddOptionComponent,
     MessagesComponent
   ]
 })

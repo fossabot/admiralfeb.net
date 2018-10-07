@@ -4,7 +4,6 @@ import { SharedModule } from '../../../../shared-module/shared-module.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { DiningOptionComponent } from './dining-option.component';
-import { AddOptionComponent } from '../add-option/add-option.component';
 
 describe('DiningOptionComponent', () => {
   let component: DiningOptionComponent;
@@ -18,7 +17,6 @@ describe('DiningOptionComponent', () => {
       ],
       declarations: [
         DiningOptionComponent,
-        AddOptionComponent
       ]
     })
       .compileComponents();

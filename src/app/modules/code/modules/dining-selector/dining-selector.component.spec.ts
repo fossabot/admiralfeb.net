@@ -6,7 +6,6 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { DiningSelectorComponent } from './dining-selector.component';
 import { DiningOptionComponent } from './dining-option/dining-option.component';
 import { MessagesComponent } from './messages/messages.component';
-import { AddOptionComponent } from './add-option/add-option.component';
 
 describe('DiningSelectorComponent', () => {
   beforeEach(async(() => {
@@ -19,7 +18,6 @@ describe('DiningSelectorComponent', () => {
         DiningSelectorComponent,
         DiningOptionComponent,
         MessagesComponent,
-        AddOptionComponent
       ],
     }).compileComponents();
   }));
