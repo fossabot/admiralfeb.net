@@ -5,3 +5,7 @@ h3 {
 .jumbotron {
   padding-top: 12px;
 }
+table { 
+  border-collapse: separate;
+  border-spacing: 2px;
+}
