@@ -2,11 +2,13 @@
   <h1>Welcome to {{ title }}!</h1>
 </div>
 <div class="jumbotron">
-  <p id="coming" *ngIf="passed === false">The <span class="dw">Doctor Who S11 E1:<i>The Woman Who Fell to Earth</i></span> simulcast is coming <span class="dw">{{'2018-10-07T17:45:00Z' | date:'MMMM d, h:mm a z' }}</span>!</p>
-  <p *ngIf="passed === false">Only <app-countdown class="dw" [inputDate]="'2018-10-07T17:45:00Z'">Loading Countdown</app-countdown> until it starts!</p>
-  <p *ngIf="passed === true">Go watch <span class="dw">Doctor Who</span>!</p>
+  <div>
+    <p>Hiya. I'm Zachary and this is my site. It has what I think is cool (see below for the next trailer of Doctor Who), some of my coding projects which can be found on the <a routerLink="../code">Code page</a>, and my <a routerLink="../wishlist">wishlist</a> if anyone really wants to know what to get for me.</p>
+    <p>Have fun and see you around!</p>
+    <p>Oh, and if anything seems.. off.. on the site, let me know by hitting Contact up at the top.</p>
+  </div>
   <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/L6QRnULIjv4" frameborder="0" allow="autoplay; encrypted-media"
+    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Z0z_1N7zh1c" frameborder="0" allow="autoplay; encrypted-media"
       allowfullscreen></iframe>
   </div>
 </div>

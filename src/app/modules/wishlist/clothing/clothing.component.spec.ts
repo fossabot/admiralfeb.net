@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatSort, MatTableDataSource } from '@angular/material';
 
 import { SharedModule } from '../../shared-module/shared-module.module';
 import { ClothingComponent } from './clothing.component';
