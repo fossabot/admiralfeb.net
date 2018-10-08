@@ -11,7 +11,7 @@ export class MainComponent implements OnInit {
       title: 'Running',
       class: 'bg-success text-white px-1 rounded',
       // tslint:disable-next-line:max-line-length
-      text: `This is running. It can be accessed from the navigation panel.<br>If on mobile, tap the <span class="material-icons md-12">menu</span> icon at the top of this page to open it.`
+      text: `This is running. It can be accessed from the navigation panel.<br>If on mobile, tap the <span class="material-icons md-12">menu</span> icon at the top of this page to open the panel.`
     },
     {
       title: 'Planned',

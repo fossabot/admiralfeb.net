@@ -8,10 +8,13 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   styleUrls: ['./messages.component.css'],
 })
 export class MessagesComponent implements OnInit {
-
+  bShowMessages = true;
   constructor(public messageService: MessageService) { }
 
   ngOnInit() {
   }
 
+  onChange(event) {
+    this.bShowMessages = event.checked;
+  }
 }
