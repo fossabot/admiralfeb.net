@@ -7,6 +7,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
@@ -22,6 +23,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatExpansionModule,
     MatInputModule,
     MatProgressSpinnerModule,
+    MatSortModule,
     MatTableModule,
     MatTooltipModule,
   ]

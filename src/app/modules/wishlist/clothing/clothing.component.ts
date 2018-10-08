@@ -9,6 +9,11 @@ export interface ZEarrings {
 
 const zEarrings: ZEarrings[] = [
   {
+    stone: 'Tanzanite',
+    month: '',
+    count: 1
+  },
+  {
     stone: 'Garnett',
     month: '01-January',
     count: 1
@@ -67,11 +72,6 @@ const zEarrings: ZEarrings[] = [
     stone: 'Zircon',
     month: '12-December',
     count: null
-  },
-  {
-    stone: 'Tanzanite',
-    month: '',
-    count: 1
   },
 ];
 
