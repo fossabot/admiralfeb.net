@@ -20,4 +20,11 @@ export class CodeComponent implements OnInit {
   hamburger() {
     $('#sidebar').toggleClass('active');
   }
+
+  navClick() {
+    const width = <number>$(window).width();
+    if (width < 768) {
+      $('#sidebar').toggleClass('active');
+    }
+  }
 }

@@ -8,6 +8,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatInputModule } from '@angular/material/input';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSortModule } from '@angular/material/sort';
+import { MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
 @NgModule({
@@ -23,6 +25,8 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatInputModule,
     MatProgressSpinnerModule,
     MatSlideToggleModule,
+    MatSortModule,
+    MatTableModule,
     MatTooltipModule,
   ]
 })
