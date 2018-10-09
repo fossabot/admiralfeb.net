@@ -4,8 +4,16 @@
       <h2>Messages</h2>
     </div>
     <div class="col">
-      <button mat-button class="clear" (click)="messageService.clear()">clear</button>
+      <mat-slide-toggle class="text-black" color="primary" (change)="onChange($event)" [checked]="bShowMessages">
+        Show Messages
+      </mat-slide-toggle>
+    </div>
+    <div class="col">
+      <button mat-button class="clear" *ngIf="bShowMessages" (click)="messageService.clear()">clear</button>
     </div>
   </div>
-  <div class="list" *ngFor='let message of messageService.messages'> {{message}} </div>
+  <div *ngIf="bShowMessages">
+    <div class="list" *ngFor='let message of messageService.messages'>
+      {{message}} </div>
+  </div>
 </div>

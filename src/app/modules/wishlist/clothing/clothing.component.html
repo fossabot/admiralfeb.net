@@ -1,6 +1,62 @@
 <div class="jumbotron">
   <h3 class="text-center">Clothing and Other Articles</h3>
-  <p class="text-center">Please go back to the <a routerLink="../main">Main Page</a> to access the current Wishlist Notebook.</p>
-  <app-under-construction></app-under-construction>
-</div>
+  <ul>
+    <li>T-Shirt Size - Adult Small</li>
+    <li>Any Oxford-type shirts need to be slim fitting and sleeves, if applicable, should be 34/35
+      <ul>
+        <li>Measurements of my favorite shirt:
+          <ul>
+            <li>Slim fit</li>
+            <li>M/M</li>
+            <li>Neck 15-15 1/2</li>
+            <li>Sleeves - 34-35</li>
+          </ul>
+        </li>
+        <li>Colors I have:
+          <ul>
+            <li>Light Blue</li>
+            <li>Royal Blue</li>
+            <li>Royal Purple</li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li>Dress pants
+      <ul>
+        <li>Length: 32</li>
+        <li>Waist: 30</li>
+      </ul>
+    </li>
+    <li>Earrings -<br>
+      Sterling Silver or Surgical Steel<br>
+      Would like at least one of each stone in the table below.<br>
+      The table is sortable by tapping on the headers.
+      <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8 w-100">
+        <ng-container matColumnDef="stone">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Stone </th>
+          <td mat-cell *matCellDef="let element">
+            <div class="mr-3">{{element.stone}} </div>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="month">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Month </th>
+          <td mat-cell *matCellDef="let element">
+            <div class="mr-3">{{element.month}} </div>
+          </td>
+        </ng-container>
+        <ng-container matColumnDef="count">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header>
+            Owned
+          </th>
+          <td mat-cell *matCellDef="let element">
+            <div class="">{{element.count}} </div>
+          </td>
+        </ng-container>
 
+        <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </li>
+
+  </ul>
+</div>

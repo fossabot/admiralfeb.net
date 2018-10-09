@@ -8,7 +8,7 @@
     </li>
   </ul>
   <button mat-raised-button color="primary" (click)="selectOption()">Select an Option</button>
-  <button mat-raised-button color="accent" class="ml-1" (click)="defaultOptions()">Default Options</button>
+  <button mat-raised-button color="warn" class="ml-1" (click)="defaultOptions()">Reset</button>
   <div *ngIf="selectedOption">
     <p>Your selected option is: {{selectedOption}}</p>
   </div>
