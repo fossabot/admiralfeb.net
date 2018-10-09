@@ -1,5 +1,5 @@
 /* @import '~@angular/material/prebuilt-themes/deeppurple-amber.css'; */
-/* @import './z-theme.scss'; */
+@import './z-theme.scss'; 
 
 html,
 body {
@@ -65,6 +65,5 @@ body {
 }
 
 .jumbotron {
-  color: black;
-  background-color: darkgray; 
+  background-color: #3d3d3d !important; 
 }

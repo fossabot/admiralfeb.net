@@ -78,7 +78,7 @@ const zEarrings: ZEarrings[] = [
 @Component({
   selector: 'app-clothing',
   templateUrl: './clothing.component.html',
-  styleUrls: ['./clothing.component.css']
+  styleUrls: ['./clothing.component.scss']
 })
 export class ClothingComponent implements OnInit {
   displayedColumns: string[] = ['stone', 'month', 'count'];

@@ -20,7 +20,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 @Component({
   selector: 'app-dining-option',
   templateUrl: './dining-option.component.html',
-  styleUrls: ['./dining-option.component.css'],
+  styleUrls: ['./dining-option.component.scss'],
 })
 export class DiningOptionComponent implements OnInit {
   @ViewChildren(MatExpansionPanel) viewPanels: QueryList<MatExpansionPanel>;

@@ -5,7 +5,7 @@ import * as $ from 'jquery';
 @Component({
   selector: 'app-code',
   templateUrl: './code.component.html',
-  styleUrls: ['./code.component.css']
+  styleUrls: ['./code.component.scss']
 })
 export class CodeComponent implements OnInit {
   tipNavButton = 'Show/Hide the Navigation Panel';

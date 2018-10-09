@@ -42,16 +42,16 @@ $my-purple: (
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$zachary-app-primary: mat-palette($my-purple);
-$zachary-app-accent:  mat-palette($mat-blue, A200, A100, A400);
+$z-primary: mat-palette($my-purple);
+$z-accent:  mat-palette($mat-blue, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
-$zachary-app-warn:    mat-palette($mat-red);
+$z-warn:    mat-palette($mat-red);
 
 // Create the theme object (a Sass map containing all of the palettes).
-$zachary-app-theme: mat-dark-theme($zachary-app-primary, $zachary-app-accent, $zachary-app-warn);
+$z-theme: mat-dark-theme($z-primary, $z-accent, $z-warn);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include angular-material-theme($zachary-app-theme);
+@include angular-material-theme($z-theme);

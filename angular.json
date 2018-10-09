@@ -27,7 +27,7 @@
             ],
             "styles": [
               "src/z-theme.scss",
-              "src/styles.css",
+              "src/styles.scss",
               "node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
             "scripts": [
