@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./about.component.scss']
 })
 export class AboutComponent implements OnInit {
-
+  profileURL: string;
+  private gravatarURL = 'https://www.gravatar.com/';
+  private email = 'Zachary@admiralfeb.net';
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }
