@@ -9,7 +9,6 @@ import { CoreModule } from './modules/core/core.module';
 import { SharedModule } from './modules/shared-module/shared-module.module';
 
 import { AppComponent } from './app.component';
-import { AboutComponent } from './about/about.component';
 
 @NgModule({
     imports: [
@@ -23,7 +22,6 @@ import { AboutComponent } from './about/about.component';
     ],
     declarations: [
         AppComponent,
-        AboutComponent,
     ],
     providers: [],
     bootstrap: [AppComponent]

@@ -4,7 +4,7 @@ import * as $ from 'jquery';
 @Component({
   selector: 'app-wishlist-main',
   templateUrl: './main.component.html',
-  styleUrls: ['./main.component.css']
+  styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
 
