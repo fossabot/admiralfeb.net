@@ -6,7 +6,7 @@ import { Welcome, Entry } from './profile';
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
-  styleUrls: ['./profile.component.css']
+  styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
   entries: Welcome;
@@ -16,7 +16,7 @@ export class ProfileComponent implements OnInit {
 
   ngOnInit() {
     this.profileService.getProfileJson('Zachary@admiralfeb.net').subscribe((entries) => {
-      const x = <Welcome>entries;
+      const x = entries;
       this.profile = x.entry.shift();
     }
     );
