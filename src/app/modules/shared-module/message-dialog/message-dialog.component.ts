@@ -4,7 +4,7 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 @Component({
   selector: 'app-message-dialog',
   templateUrl: './message-dialog.component.html',
-  styleUrls: ['./message-dialog.component.css']
+  styleUrls: ['./message-dialog.component.scss']
 })
 export class MessageDialogComponent {
 title: string;

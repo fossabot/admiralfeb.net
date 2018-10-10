@@ -6,7 +6,7 @@ import { map } from 'rxjs/operators';
 @Component({
   selector: 'app-core',
   templateUrl: './core.component.html',
-  styleUrls: ['./core.component.css']
+  styleUrls: ['./core.component.scss']
 })
 export class CoreComponent implements OnInit {
   title = 'Admiralfeb\'s Website';
