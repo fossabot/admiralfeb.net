@@ -5,7 +5,6 @@ import { MatExpansionPanel } from '@angular/material/expansion';
 import { DiningService } from '../../dining-service.service';
 import { DiningOptions } from '../../mock-options';
 import { MessageService } from '../../message.service';
-import * as $ from 'jquery';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { MatDialog } from '@angular/material/dialog';
 import { MessageDialogComponent } from '../../../../../shared-module/components/message-dialog/message-dialog.component';
@@ -41,17 +40,7 @@ export class DiningOptionComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.attachEvents();
     this.getOptions();
-  }
-
-  attachEvents() {
-    $('#btnnewOption').click(this.onSubmit.bind(this));
-    $('#txtnewOption').keyup(function (e) {
-      if (e.key === 'Enter') {
-        this.onSubmit();
-      }
-    }.bind(this));
   }
 
   getOptions(): void {

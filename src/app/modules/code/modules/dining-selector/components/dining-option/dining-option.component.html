@@ -25,11 +25,11 @@
         Option to Add
       </mat-label>
       <input id="txtnewOption" matInput #newOption placeholder="Option" [formControl]="optionFormControl"
-        [errorStateMatcher]="matcher">
+        [errorStateMatcher]="matcher" (keyup.enter)="onSubmit()">
       <mat-error *ngIf="optionFormControl.hasError('required')">
         {{nothingEntered}}
       </mat-error>
     </mat-form-field>
-    <button mat-button id="btnnewOption">Add</button>
+    <button mat-button id="btnnewOption" (click)="onSubmit()">Add</button>
   </mat-expansion-panel>
 </div>
