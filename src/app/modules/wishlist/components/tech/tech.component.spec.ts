@@ -1,22 +1,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SharedModule } from '../../shared-module/shared-module.module';
-import { OtherComponent } from './other.component';
+import { SharedModule } from 'src/app/modules/shared-module/shared-module.module';
+import { TechComponent } from './tech.component';
 
-describe('OtherComponent', () => {
-  let component: OtherComponent;
-  let fixture: ComponentFixture<OtherComponent>;
+describe('TechComponent', () => {
+  let component: TechComponent;
+  let fixture: ComponentFixture<TechComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [SharedModule],
-      declarations: [OtherComponent]
+      declarations: [TechComponent]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(OtherComponent);
+    fixture = TestBed.createComponent(TechComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

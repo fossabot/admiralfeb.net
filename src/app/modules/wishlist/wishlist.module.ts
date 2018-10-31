@@ -6,13 +6,13 @@ import { WishlistRoutingModule } from './wishlist.routing';
 import { SharedModule } from '../shared-module/shared-module.module';
 
 import { WishlistComponent } from './wishlist.component';
-import { MainComponent } from './_main/main.component';
-import { HomeComponent } from './home/home.component';
-import { ClothingComponent } from './clothing/clothing.component';
-import { MoneyComponent } from './money/money.component';
-import { OtherComponent } from './other/other.component';
-import { TechComponent } from './tech/tech.component';
-import { VideoComponent } from './video/video.component';
+import { MainComponent } from './components/_main/main.component';
+import { HomeComponent } from './components/home/home.component';
+import { ClothingComponent } from './components/clothing/clothing.component';
+import { MoneyComponent } from './components/money/money.component';
+import { OtherComponent } from './components/other/other.component';
+import { TechComponent } from './components/tech/tech.component';
+import { VideoComponent } from './components/video/video.component';
 
 @NgModule({
   imports: [

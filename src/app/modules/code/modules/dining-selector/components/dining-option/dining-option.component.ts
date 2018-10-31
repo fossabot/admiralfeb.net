@@ -2,13 +2,13 @@ import { Component, OnInit, Output, Injectable, Input, ViewChildren, QueryList, 
 import { FormGroupDirective, FormControl, NgForm, Validators } from '@angular/forms';
 import { MatExpansionPanel } from '@angular/material/expansion';
 
-import { DiningService } from '../dining-service.service';
-import { DiningOptions } from '../mock-options';
-import { MessageService } from '../message.service';
+import { DiningService } from '../../dining-service.service';
+import { DiningOptions } from '../../mock-options';
+import { MessageService } from '../../message.service';
 import * as $ from 'jquery';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { MatDialog } from '@angular/material/dialog';
-import { MessageDialogComponent } from '../../../../shared-module/message-dialog/message-dialog.component';
+import { MessageDialogComponent } from '../../../../../shared-module/components/message-dialog/message-dialog.component';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {

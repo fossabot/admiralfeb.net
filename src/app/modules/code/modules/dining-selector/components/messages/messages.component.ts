@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { MessageService } from '../message.service';
+import { MessageService } from '../../message.service';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({

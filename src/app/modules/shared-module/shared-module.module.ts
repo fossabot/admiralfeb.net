@@ -3,12 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { MaterialModule } from './material/material.module';
+import { MaterialModule } from './components/material/material.module';
 
-import { CountdownComponent } from './countdown/countdown.component';
-import { ErrorNotFoundComponent } from './error-not-found/error-not-found.component';
-import { UnderConstructionComponent } from './under-construction/under-construction.component';
-import { MessageDialogComponent } from './message-dialog/message-dialog.component';
+import { CountdownComponent } from './components/countdown/countdown.component';
+import { ErrorNotFoundComponent } from './components/error-not-found/error-not-found.component';
+import { UnderConstructionComponent } from './components/under-construction/under-construction.component';
+import { MessageDialogComponent } from './components/message-dialog/message-dialog.component';
 
 @NgModule({
   imports: [

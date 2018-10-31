@@ -1,22 +1,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SharedModule } from '../../shared-module/shared-module.module';
-import { HomeComponent } from './home.component';
+import { SharedModule } from 'src/app/modules/shared-module/shared-module.module';
+import { MoneyComponent } from './money.component';
 
-describe('HomeComponent', () => {
-  let component: HomeComponent;
-  let fixture: ComponentFixture<HomeComponent>;
+describe('MoneyComponent', () => {
+  let component: MoneyComponent;
+  let fixture: ComponentFixture<MoneyComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [SharedModule],
-      declarations: [HomeComponent]
+      declarations: [MoneyComponent]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HomeComponent);
+    fixture = TestBed.createComponent(MoneyComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

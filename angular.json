@@ -26,9 +26,9 @@
               "src/assets"
             ],
             "styles": [
-              "src/z-theme.scss",
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
               "src/styles.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "src/z-theme.scss"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.js",

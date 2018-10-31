@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SharedModule } from '../../shared-module/shared-module.module';
+import { SharedModule } from 'src/app/modules/shared-module/shared-module.module';
 import { VideoComponent } from './video.component';
 
 describe('VideoComponent', () => {
