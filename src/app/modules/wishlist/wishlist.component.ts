@@ -1,7 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { Router, ActivatedRoute } from '@angular/router';
-import * as $ from 'jquery';
 
 @Component({
   selector: 'app-wishlist',
@@ -11,22 +10,39 @@ import * as $ from 'jquery';
 export class WishlistComponent implements OnInit {
   title = `Admiralfeb's Wishlist`;
   tipNavButton = 'Show/Hide the Navigation Panel';
+  innerWidth: number;
+  bNavActive = false;
+
   constructor(
     private titleService: Title
   ) { }
 
   ngOnInit() {
     this.titleService.setTitle(this.title);
+    this.innerWidth = window.innerWidth;
+    if (<number>this.innerWidth > 768) {
+      this.bNavActive = true;
+    }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.innerWidth = window.innerWidth;
+    if (<number>this.innerWidth > 768) {
+      this.bNavActive = true;
+    } else {
+      this.bNavActive = false;
+    }
   }
 
   hamburger() {
-    $('#sidebar').toggleClass('active');
+    this.bNavActive = this.bNavActive ? false : true;
   }
 
   navClick() {
-    const width = <number>$(window).width();
-    if (width < 768) {
-      $('#sidebar').toggleClass('active');
+    this.innerWidth = window.innerWidth;
+    if (<number>this.innerWidth < 768) {
+      this.bNavActive = false;
     }
   }
 }

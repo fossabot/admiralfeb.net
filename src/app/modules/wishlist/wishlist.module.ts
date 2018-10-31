@@ -12,7 +12,7 @@ import { ClothingComponent } from './components/clothing/clothing.component';
 import { MoneyComponent } from './components/money/money.component';
 import { OtherComponent } from './components/other/other.component';
 import { TechComponent } from './components/tech/tech.component';
-import { VideoComponent } from './components/video/video.component';
+import { VidsComponent } from './components/vids/vids.component';
 
 @NgModule({
   imports: [
@@ -29,7 +29,7 @@ import { VideoComponent } from './components/video/video.component';
     MoneyComponent,
     OtherComponent,
     TechComponent,
-    VideoComponent
+    VidsComponent,
   ],
 })
 export class WishlistModule { }

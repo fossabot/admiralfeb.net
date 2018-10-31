@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-tech',
+  selector: 'wishlist-tech',
   templateUrl: './tech.component.html',
   styleUrls: ['./tech.component.scss']
 })

@@ -76,7 +76,7 @@ const zEarrings: ZEarrings[] = [
 ];
 
 @Component({
-  selector: 'app-clothing',
+  selector: 'wishlist-clothing',
   templateUrl: './clothing.component.html',
   styleUrls: ['./clothing.component.scss']
 })

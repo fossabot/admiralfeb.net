@@ -1,4 +1,4 @@
-<div class="row d-flex align-items-center">
+<div class="row d-flex align-items-center w-100">
   <div class="col-sm-1 h-100 d-flex align-items-center">
     <i class="material-icons md-36 hamburger" (click)="hamburger()" [matTooltip]="tipNavButton" matTooltipPosition="after">
       menu
@@ -11,7 +11,7 @@
 
 
 <div class="wrapper">
-  <nav id="sidebar" class="nav flex-column">
+  <nav id="sidebar" class="nav flex-column" [class.active]="bNavActive" >
     <div class="sidebar-header text-center">
       <h3>Navigation</h3>
     </div>

@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import * as $ from 'jquery';
 
 @Component({
-  selector: 'app-wishlist-main',
+  selector: 'wishlist-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+  updateDate = '2018-10-30';
 
   constructor() { }
 

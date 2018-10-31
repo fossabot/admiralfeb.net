@@ -10,10 +10,12 @@ body {
 }
 
 a {
-  color: mat-color($z-primary);
+  color: mat-color($z-primary, 300);
 }
 a:hover {
-  color: mat-color($z-accent);
+  color: white;
+  background-color: mat-color($z-primary, 500);
+  border-radius: 5px;
 }
 
 h1 {

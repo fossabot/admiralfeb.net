@@ -3,11 +3,11 @@ import { Routes, RouterModule } from '@angular/router';
 import { MainComponent } from './components/_main/main.component';
 import { WishlistComponent } from './wishlist.component';
 import { ClothingComponent } from './components/clothing/clothing.component';
-import { VideoComponent } from './components/video/video.component';
+import { VidsComponent } from './components/vids/vids.component';
 import { TechComponent } from './components/tech/tech.component';
-import { OtherComponent } from './components/other/other.component';
-import { MoneyComponent } from './components/money/money.component';
 import { HomeComponent } from './components/home/home.component';
+import { MoneyComponent } from './components/money/money.component';
+import { OtherComponent } from './components/other/other.component';
 
 const wishlistRoutes: Routes = [
   {
@@ -19,7 +19,7 @@ const wishlistRoutes: Routes = [
       { path: 'money', component: MoneyComponent },
       { path: 'other', component: OtherComponent },
       { path: 'tech', component: TechComponent },
-      { path: 'video', component: VideoComponent },
+      { path: 'video', component: VidsComponent },
       { path: '', redirectTo: 'main', pathMatch: 'full' }
     ]
   },
