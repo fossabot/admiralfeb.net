@@ -1,48 +1,29 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Router, ActivatedRoute } from '@angular/router';
+import { NavigationModel } from '../shared-module/models/navigationModel';
 
 @Component({
   selector: 'app-wishlist',
-  templateUrl: './wishlist.component.html',
+  template: `<content-with-side-nav [headerText]="title" [navItems]="navItems"></content-with-side-nav>`,
   styleUrls: ['./wishlist.component.scss']
 })
 export class WishlistComponent implements OnInit {
   title = `Admiralfeb's Wishlist`;
-  tipNavButton = 'Show/Hide the Navigation Panel';
-  innerWidth: number;
-  bNavActive = false;
 
+  navItems: NavigationModel[] = [
+    { text: 'Wishlist Home', link: 'main'},
+    { text: 'Clothing', link: 'clothing'},
+    { text: 'Home Stuff', link: 'home'},
+    { text: 'Money Related', link: 'money'},
+    { text: 'Other', link: 'other'},
+    { text: 'Technology', link: 'tech'},
+    { text: 'Video', link: 'video'},
+  ];
   constructor(
     private titleService: Title
   ) { }
 
   ngOnInit() {
     this.titleService.setTitle(this.title);
-    this.innerWidth = window.innerWidth;
-    if (<number>this.innerWidth > 768) {
-      this.bNavActive = true;
-    }
-  }
-
-  @HostListener('window:resize', ['$event'])
-  onResize(event) {
-    this.innerWidth = window.innerWidth;
-    if (<number>this.innerWidth > 768) {
-      this.bNavActive = true;
-    } else {
-      this.bNavActive = false;
-    }
-  }
-
-  hamburger() {
-    this.bNavActive = this.bNavActive ? false : true;
-  }
-
-  navClick() {
-    this.innerWidth = window.innerWidth;
-    if (<number>this.innerWidth < 768) {
-      this.bNavActive = false;
-    }
   }
 }

@@ -4,32 +4,24 @@ html,
 body {
   /* background-color: lightgray !important; */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
   margin: 0 !important;
   padding: 0;
   --colorZ: rgb(163, 73, 164);
+  height: 100%;
 }
 
 a {
   color: mat-color($z-primary, 300);
+  border-radius: 5px;
 }
 a:hover {
   color: white;
   background-color: mat-color($z-primary, 500);
-  border-radius: 5px;
 }
 
 h1 {
   margin: 0;
-}
-
-html,
-body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  font-family: 'Roboto', sans-serif;
 }
 
 .hamburger {
@@ -73,5 +65,5 @@ body {
 }
 
 .jumbotron {
-  background-color: #3d3d3d !important; 
+  background-color: #303030 !important; 
 }
