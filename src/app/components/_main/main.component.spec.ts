@@ -1,23 +1,23 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { CoreComponent } from './core.component';
+import { MainComponent } from './main.component';
 import { SharedModule } from 'src/app/modules/shared-module/shared-module.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-describe('CoreComponent', () => {
-  let component: CoreComponent;
-  let fixture: ComponentFixture<CoreComponent>;
+describe('MainComponent', () => {
+  let component: MainComponent;
+  let fixture: ComponentFixture<MainComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CoreComponent ],
+      declarations: [ MainComponent ],
       imports: [SharedModule, NoopAnimationsModule]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(CoreComponent);
+    fixture = TestBed.createComponent(MainComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

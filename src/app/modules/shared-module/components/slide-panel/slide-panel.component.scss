@@ -1,4 +1,4 @@
-.container-z {
+.container {
   display: flex;
   flex-direction: column;
   position: static;
@@ -15,13 +15,13 @@ h1.app-name {
   margin-left: 8px;
 }
 
-.sidenav-container {
+mat-sidenav-container {
   /* When the sidenav is not fixed, stretch the sidenav container to fill the available space. This
        causes `<mat-sidenav-content>` to act as our scrolling element for desktop layouts. */
   flex: 1;
 }
 
-.is-mobile .sidenav-container {
+mat-sidenav-container.is-mobile {
   /* When the sidenav is fixed, don't constrain the height of the sidenav container. This allows the
        `<body>` to be our scrolling element for mobile layouts. */
   flex: 1 0 auto;
@@ -39,9 +39,11 @@ nav-list .mat-list-item:hover {
   background-color: #ddd !important;
   color: black !important;
 }
+mat-nav-list{
+  margin: 5px;
+}
 a.navItem {
-  padding-left: 10px;
-  padding-right: 10px;
+  border-radius: 10px;
 }
 
 

@@ -1,20 +1,22 @@
 import { TestBed, async } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
 
 import { SharedModule } from './modules/shared-module/shared-module.module';
-import { CoreModule } from './modules/core/core.module';
+import { AboutModule } from './modules/about/about.module';
 
 import { AppComponent } from './app.component';
-import { AboutModule } from './modules/about/about.module';
-import { RouterTestingModule } from '@angular/router/testing';
+import { MainComponent } from './components/_main/main.component';
+import { NavbarComponent} from './components/navbar/navbar.component';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
         AppComponent,
+        MainComponent,
+        NavbarComponent,
       ],
       imports: [
-        CoreModule,
         SharedModule,
         RouterTestingModule,
         AboutModule

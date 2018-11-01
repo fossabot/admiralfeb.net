@@ -4,12 +4,12 @@ import { interval } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-core',
-  templateUrl: './core.component.html',
-  styleUrls: ['./core.component.scss']
+  selector: 'app-main',
+  templateUrl: './main.component.html',
+  styleUrls: ['./main.component.scss']
 })
-export class CoreComponent implements OnInit {
-  title = 'Admiralfeb\'s Website';
+export class MainComponent implements OnInit {
+  title = `Admiralfeb's Website`;
   passed = false;
 
   constructor(
