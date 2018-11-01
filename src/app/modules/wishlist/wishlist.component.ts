@@ -1,32 +1,29 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { Router, ActivatedRoute } from '@angular/router';
-import * as $ from 'jquery';
+import { NavigationModel } from '../shared-module/models/navigationModel';
 
 @Component({
   selector: 'app-wishlist',
-  templateUrl: './wishlist.component.html',
+  template: `<content-with-side-nav [headerText]="title" [navItems]="navItems"></content-with-side-nav>`,
   styleUrls: ['./wishlist.component.scss']
 })
 export class WishlistComponent implements OnInit {
   title = `Admiralfeb's Wishlist`;
-  tipNavButton = 'Show/Hide the Navigation Panel';
+
+  navItems: NavigationModel[] = [
+    { text: 'Wishlist Home', link: 'main'},
+    { text: 'Clothing', link: 'clothing'},
+    { text: 'Home Stuff', link: 'home'},
+    { text: 'Money Related', link: 'money'},
+    { text: 'Other', link: 'other'},
+    { text: 'Technology', link: 'tech'},
+    { text: 'Video', link: 'video'},
+  ];
   constructor(
     private titleService: Title
   ) { }
 
   ngOnInit() {
     this.titleService.setTitle(this.title);
-  }
-
-  hamburger() {
-    $('#sidebar').toggleClass('active');
-  }
-
-  navClick() {
-    const width = <number>$(window).width();
-    if (width < 768) {
-      $('#sidebar').toggleClass('active');
-    }
   }
 }
