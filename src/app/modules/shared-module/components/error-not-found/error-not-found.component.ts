@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-error-not-found',
+  selector: 'error-not-found',
   templateUrl: './error-not-found.component.html',
   styleUrls: ['./error-not-found.component.scss']
 })

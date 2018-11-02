@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent implements OnInit {
+export class AppMainComponent implements OnInit {
   title = `Admiralfeb's Website`;
   passed = false;
 

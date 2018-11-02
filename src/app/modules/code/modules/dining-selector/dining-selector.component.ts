@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-dining-selector',
+  selector: 'code-dining-selector',
   templateUrl: './dining-selector.component.html',
   styleUrls: ['./dining-selector.component.scss']
 })

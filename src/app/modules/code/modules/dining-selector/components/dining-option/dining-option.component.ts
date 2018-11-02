@@ -17,7 +17,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 }
 
 @Component({
-  selector: 'app-dining-option',
+  selector: 'code-dining-selector-dining-option',
   templateUrl: './dining-option.component.html',
   styleUrls: ['./dining-option.component.scss'],
 })

@@ -5,7 +5,7 @@ import { NavigationModel } from '../shared-module/models/navigationModel';
 @Component({
   selector: 'app-wishlist',
   template: `<content-with-side-nav [headerText]="title" [navItems]="navItems"></content-with-side-nav>`,
-  styleUrls: ['./wishlist.component.scss']
+  styles: [],
 })
 export class WishlistComponent implements OnInit {
   title = `Admiralfeb's Wishlist`;
@@ -13,6 +13,7 @@ export class WishlistComponent implements OnInit {
   navItems: NavigationModel[] = [
     { text: 'Wishlist Home', link: 'main'},
     { text: 'Clothing', link: 'clothing'},
+    { text: 'Crafting', link: 'crafting'},
     { text: 'Home Stuff', link: 'home'},
     { text: 'Money Related', link: 'money'},
     { text: 'Other', link: 'other'},

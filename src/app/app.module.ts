@@ -7,7 +7,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { SharedModule } from './modules/shared-module/shared-module.module';
 
 import { AppComponent } from './app.component';
-import { MainComponent } from './components/_main/main.component';
+import { AppMainComponent } from './components/_main/main.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
@@ -20,7 +20,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     ],
     declarations: [
         AppComponent,
-        MainComponent,
+        AppMainComponent,
         NavbarComponent,
     ],
     providers: [],

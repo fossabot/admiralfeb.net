@@ -1,18 +1,22 @@
-nav{
+nav {
   width: 100%;
   display: flex;
 }
+
 .navbar {
   width: 100%;
   padding: 5px 10px;
   background-color: #333;
   height: auto;
   min-height: auto;
+  justify-content: initial;
 }
+
 #Z-img {
   height: auto;
   width: 55px;
 }
+
 .container {
   justify-content: flex-start;
 }
@@ -23,23 +27,25 @@ nav{
   margin-right: 1em;
   width: 52px
 }
+
 .navbar .linkImage {
   width: 52px;
   height: auto;
+  padding: 0;
 }
 
 .navbar .nav-link {
   background-color: transparent;
-  float: left;
-  display: flex;
   color: #f2f2f2;
   text-align: center;
-  padding: 10px;
   text-decoration: none;
-  font-size: 15px;
   margin-top: auto;
   margin-bottom: auto;
   margin-left: .5em;
+}
+
+center {
+  margin: auto;
 }
 
 .navbar a:hover,

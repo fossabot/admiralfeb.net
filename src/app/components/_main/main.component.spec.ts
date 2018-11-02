@@ -1,23 +1,23 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainComponent } from './main.component';
+import { AppMainComponent } from './main.component';
 import { SharedModule } from 'src/app/modules/shared-module/shared-module.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-describe('MainComponent', () => {
-  let component: MainComponent;
-  let fixture: ComponentFixture<MainComponent>;
+describe('AppMainComponent', () => {
+  let component: AppMainComponent;
+  let fixture: ComponentFixture<AppMainComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MainComponent ],
+      declarations: [ AppMainComponent ],
       imports: [SharedModule, NoopAnimationsModule]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MainComponent);
+    fixture = TestBed.createComponent(AppMainComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -26,9 +26,9 @@ describe('MainComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it(`should have as title 'Admiralfeb\'s Website'`, () => {
+  it(`should have as title 'Admiralfeb's Website'`, () => {
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('Admiralfeb\'s Website');
+    expect(app.title).toEqual(`Admiralfeb's Website`);
   });
 
   it('should render title in a h1 tag', () => {

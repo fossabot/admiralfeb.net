@@ -3,7 +3,7 @@ import { MessageService } from '../../message.service';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 
 @Component({
-  selector: 'app-messages',
+  selector: 'code-dining-selector-messages',
   templateUrl: './messages.component.html',
   styleUrls: ['./messages.component.scss'],
 })

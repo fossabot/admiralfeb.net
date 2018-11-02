@@ -9,7 +9,7 @@ import { CountdownComponent } from './components/countdown/countdown.component';
 import { ErrorNotFoundComponent } from './components/error-not-found/error-not-found.component';
 import { UnderConstructionComponent } from './components/under-construction/under-construction.component';
 import { MessageDialogComponent } from './components/message-dialog/message-dialog.component';
-import { SlidePanelComponent } from './components/slide-panel/slide-panel.component';
+import { ContentwithSideNavComponent } from './components/content-with-side-nav/content-with-side-nav.component';
 
 @NgModule({
   imports: [
@@ -24,7 +24,7 @@ import { SlidePanelComponent } from './components/slide-panel/slide-panel.compon
     ErrorNotFoundComponent,
     UnderConstructionComponent,
     MessageDialogComponent,
-    SlidePanelComponent,
+    ContentwithSideNavComponent,
   ],
   entryComponents: [
     MessageDialogComponent
@@ -38,7 +38,7 @@ import { SlidePanelComponent } from './components/slide-panel/slide-panel.compon
     CountdownComponent,
     ErrorNotFoundComponent,
     UnderConstructionComponent,
-    SlidePanelComponent,
+    ContentwithSideNavComponent,
   ]
 })
 export class SharedModule { }

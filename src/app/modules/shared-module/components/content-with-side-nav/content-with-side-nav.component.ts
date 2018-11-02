@@ -6,10 +6,10 @@ import { MatSidenav } from '@angular/material/sidenav';
 
 @Component({
   selector: 'content-with-side-nav',
-  templateUrl: './slide-panel.component.html',
-  styleUrls: ['./slide-panel.component.scss']
+  templateUrl: './content-with-side-nav.component.html',
+  styleUrls: ['./content-with-side-nav.component.scss']
 })
-export class SlidePanelComponent implements OnDestroy, OnInit {
+export class ContentwithSideNavComponent implements OnDestroy, OnInit {
   @Input() navheaderText = 'Navigation';
   @Input() navItems: NavigationModel = null;
   @Input() headerText = '';

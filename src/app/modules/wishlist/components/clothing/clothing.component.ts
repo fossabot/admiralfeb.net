@@ -14,6 +14,11 @@ const zEarrings: ZEarrings[] = [
     count: 1
   },
   {
+    stone: 'Onyx',
+    month: '',
+    count: null
+  },
+  {
     stone: 'Garnett',
     month: '01-January',
     count: 1
