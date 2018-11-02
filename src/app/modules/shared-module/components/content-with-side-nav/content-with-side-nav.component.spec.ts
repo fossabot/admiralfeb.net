@@ -1,25 +1,25 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SlidePanelComponent } from './slide-panel.component';
+import { ContentwithSideNavComponent } from './content-with-side-nav.component';
 import { MaterialModule } from '../../material/material.module';
 import { RouterTestingModule } from '@angular/router/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 
-describe('SlidePanelComponent', () => {
-  let component: SlidePanelComponent;
-  let fixture: ComponentFixture<SlidePanelComponent>;
+describe('ContentwithSideNavComponent', () => {
+  let component: ContentwithSideNavComponent;
+  let fixture: ComponentFixture<ContentwithSideNavComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       imports: [MaterialModule, RouterTestingModule, NoopAnimationsModule],
-      declarations: [ SlidePanelComponent ]
+      declarations: [ ContentwithSideNavComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SlidePanelComponent);
+    fixture = TestBed.createComponent(ContentwithSideNavComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

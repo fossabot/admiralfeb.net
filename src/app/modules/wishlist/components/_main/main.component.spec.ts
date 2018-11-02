@@ -1,22 +1,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MainComponent } from './main.component';
+import { WishlistMainComponent } from './main.component';
 import { SharedModule } from 'src/app/modules/shared-module/shared-module.module';
 
-describe('MainComponent', () => {
-  let component: MainComponent;
-  let fixture: ComponentFixture<MainComponent>;
+describe('WishlistMainComponent', () => {
+  let component: WishlistMainComponent;
+  let fixture: ComponentFixture<WishlistMainComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [MainComponent],
+      declarations: [WishlistMainComponent],
       imports: [SharedModule]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MainComponent);
+    fixture = TestBed.createComponent(WishlistMainComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

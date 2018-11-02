@@ -1,7 +1,5 @@
-h3 {
-    font-weight: bold;
-}
+@import '../../wishlist.scss';
 
-.jumbotron {
-  padding-top: 12px;
+strong{
+    color: mat-color($z-warn);
 }

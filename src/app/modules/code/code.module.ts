@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SharedModule } from '../shared-module/shared-module.module';
 
 import { CodeRoutingModule } from './code.routing';
-import { MainComponent } from './components/_main/main.component';
+import { CodeMainComponent } from './components/_main/main.component';
 import { CodeComponent } from './code.component';
 
 @NgModule({
@@ -12,6 +12,6 @@ import { CodeComponent } from './code.component';
     CodeRoutingModule,
     SharedModule
   ],
-  declarations: [MainComponent, CodeComponent]
+  declarations: [CodeMainComponent, CodeComponent]
 })
 export class CodeModule { }

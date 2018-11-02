@@ -4,13 +4,13 @@
     enjoyment.</h4>
   <h4>Statuses:</h4>
   <ul>
-    <li *ngFor="let status of statuses"><span [class]="status.class">{{status.title}}</span> -
+    <li *ngFor="let status of statuses"><mat-basic-chip [class]="status.class">{{status.title}}</mat-basic-chip> -
       <span [innerHTML]="status.text"></span></li>
   </ul>
   <h4>Code to come:</h4>
   <ul>
     <li *ngFor="let project of codeinProcess"><span class="title">{{project.title}}</span> -
       <span [class]="project.statusClass">{{project.status}}</span>
-      - {{project.description}}</li>
+      - <span [innerHTML]="project.description"></span></li>
   </ul>
 </div>

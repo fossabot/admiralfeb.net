@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-main',
+  selector: 'code-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
-export class MainComponent implements OnInit {
+export class CodeMainComponent implements OnInit {
   statuses = [
     {
       title: 'Running',
       class: 'bg-success text-white px-1 rounded',
       // tslint:disable-next-line:max-line-length
-      text: `This is running. It can be accessed from the navigation panel.<br>If on mobile, tap the <span class="material-icons md-12">menu</span> icon at the top of this page to open the panel.`
+      text: `This is running. It can be accessed from the navigation panel.<br>If on mobile, tap the <span class="material-icons md-12 align-text-bottom">menu</span> icon at the top-right of this page to open the panel.`
     },
     {
       title: 'Planned',
@@ -25,8 +25,8 @@ export class MainComponent implements OnInit {
       status: 'Running',
       statusClass: 'bg-success text-white px-1 rounded',
       description:
-        'Enter items in and let a RNG (Random Number Generator) pick for you.' +
-        '\n Has the default options of Chipotle, FireHouse Subs, and Noodles and Co.'
+        `Enter items in and let a RNG (Random Number Generator) pick for you.` +
+        ` <br>Has the default options of Chipotle, FireHouse Subs, and Noodles and Co.`
     },
     {
       title: 'RuneScape User Info',
