@@ -1,8 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { CodeComponent } from './code.component';
 import { RouterTestingModule } from '@angular/router/testing';
-import { MatTooltipModule } from '@angular/material/tooltip';
+import { SharedModule } from '../shared-module/shared-module.module';
 
 describe('CodeComponent', () => {
   let component: CodeComponent;
@@ -10,8 +11,8 @@ describe('CodeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [RouterTestingModule, MatTooltipModule],
-      declarations: [CodeComponent]
+      imports: [SharedModule, RouterTestingModule, NoopAnimationsModule],
+      declarations: [CodeComponent],
     })
       .compileComponents();
   }));

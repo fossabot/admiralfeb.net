@@ -16,12 +16,12 @@ h1 {
     min-width: 200px;
     max-width: 200px;
     min-height: 100vh;
-    margin-left: 0;
+    margin-left: -200px;
     transition: all 0.5s linear;
   }
   
   #sidebar.active {
-    margin-left: -200px;
+    margin-left: 0;
   }
   
   .nav {
@@ -62,14 +62,4 @@ h1 {
   .nav a.active {
     background-color: rgb(163, 73, 164);
     color: white;
-  }
-  
-  @media (max-width: 768px) {
-    #sidebar {
-      margin-left: -200px;
-    }
-  
-    #sidebar.active {
-      margin-left: 0;
-    }
   }

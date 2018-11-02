@@ -5,8 +5,8 @@ import { DiningSelectorRoutingModule } from './dining-selector.routing';
 import { SharedModule} from '../../../shared-module/shared-module.module';
 
 import { DiningSelectorComponent } from './dining-selector.component';
-import { DiningOptionComponent } from './dining-option/dining-option.component';
-import { MessagesComponent } from './messages/messages.component';
+import { DiningOptionComponent } from './components/dining-option/dining-option.component';
+import { MessagesComponent } from './components/messages/messages.component';
 
 @NgModule({
   imports: [
