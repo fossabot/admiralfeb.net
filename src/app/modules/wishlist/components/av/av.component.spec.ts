@@ -1,22 +1,22 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SharedModule } from 'src/app/modules/shared-module/shared-module.module';
-import { VidsComponent } from './vids.component';
+import { AVComponent } from './av.component';
 
-describe('VidsComponent', () => {
-    let component: VidsComponent;
-    let fixture: ComponentFixture<VidsComponent>;
+describe('AVComponent', () => {
+    let component: AVComponent;
+    let fixture: ComponentFixture<AVComponent>;
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
             imports: [SharedModule],
-            declarations: [VidsComponent]
+            declarations: [AVComponent]
         })
             .compileComponents();
     }));
 
     beforeEach(() => {
-        fixture = TestBed.createComponent(VidsComponent);
+        fixture = TestBed.createComponent(AVComponent);
         component = fixture.componentInstance;
         fixture.detectChanges();
     });

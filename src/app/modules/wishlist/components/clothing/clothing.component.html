@@ -1,15 +1,17 @@
 <div class="jumbotron">
+
   <h3 class="text-center">Clothing and Other Articles</h3>
-  <ul>
+  <ul class="list-style-none">
+    <li><a href="https://www.amazon.com/hz/wishlist/dl/invite/fpF2d6T">Amazon Clothing Wishlist</a></li>
     <li>T-Shirt Size - Adult Small</li>
-    <li>Any Oxford-type shirts need to be slim fitting and sleeves, if applicable, should be 34/35
-      <ul>
+    <li>Oxford-type Shirts
+      <ul class="list-style-none">
         <li>Measurements of my favorite shirt:
           <ul>
             <li>Slim fit</li>
             <li>M/M</li>
-            <li>Neck 15-15 1/2</li>
-            <li>Sleeves - 34-35</li>
+            <li>Neck: 15-15 1/2</li>
+            <li>Sleeves: 34-35</li>
           </ul>
         </li>
         <li>Colors I have:
@@ -22,15 +24,18 @@
       </ul>
     </li>
     <li>Dress pants
-      <ul>
+      <ul class="list-style-none">
         <li>Length: 32</li>
         <li>Waist: 30</li>
       </ul>
     </li>
-    <li>Earrings -<br>
-      Sterling Silver or Surgical Steel<br>
-      Would like at least one of each stone in the table below.<br>
-      The table is sortable by tapping on the headers.
+    <li>Socks: I like ankle socks</li>
+    <li>Earrings
+      <ul class="list-style-none">
+        <li>Sterling Silver or Surgical Steel</li>
+        <li>Would like at least one of each stone in the table below.</li>
+        <li>The table is sortable.</li>
+      </ul>
       <table mat-table [dataSource]="dataSource" matSort class="mat-elevation-z8 w-100">
         <ng-container matColumnDef="stone">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Stone </th>
@@ -57,6 +62,5 @@
         <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       </table>
     </li>
-
   </ul>
 </div>

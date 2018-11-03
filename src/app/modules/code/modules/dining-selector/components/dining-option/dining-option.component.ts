@@ -7,7 +7,7 @@ import { DiningOptions } from '../../mock-options';
 import { MessageService } from '../../message.service';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { MatDialog } from '@angular/material/dialog';
-import { MessageDialogComponent } from '../../../../../shared-module/components/message-dialog/message-dialog.component';
+import { MessageDialogComponent } from 'src/app/modules/shared-module/components/message-dialog/message-dialog.component';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
