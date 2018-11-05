@@ -1,13 +1,11 @@
 <div class="jumbotron">
   <h3 class="text-center">Home Stuff</h3>
-  <ul>
-    <li>
-      <a href="https://www.amazon.com/hz/wishlist/dl/invite/83j2Twy">Amazon Home Wishlist</a>
-    </li>
-    <li>
-      <a routerLink="../tech" matTooltip="Redirect to Tech page" matTooltipPosition="after">Home Automation</a>
-      <ul>
-      </ul>
-    </li>
-  </ul>
+  <mat-list>
+    <mat-list-item>
+      <a mat-raised-button color="primary" href="https://www.amazon.com/hz/wishlist/dl/invite/gWEl0iP">Amazon Home Wishlist</a>
+    </mat-list-item>
+    <mat-list-item>
+      <a mat-raised-button color="primary" routerLink="../tech" fragment="homeAutomation" matTooltip="Redirects to Tech page" matTooltipPosition="after">See Home Automation on the Tech Page</a>
+    </mat-list-item>
+  </mat-list>
 </div>

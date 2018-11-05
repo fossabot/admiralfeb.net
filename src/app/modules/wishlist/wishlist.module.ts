@@ -12,7 +12,7 @@ import { ClothingComponent } from './components/clothing/clothing.component';
 import { MoneyComponent } from './components/money/money.component';
 import { OtherComponent } from './components/other/other.component';
 import { TechComponent } from './components/tech/tech.component';
-import { VidsComponent } from './components/vids/vids.component';
+import { AVComponent } from './components/av/av.component';
 import { CraftingComponent } from './components/crafting/crafting.component';
 
 @NgModule({
@@ -30,7 +30,7 @@ import { CraftingComponent } from './components/crafting/crafting.component';
     MoneyComponent,
     OtherComponent,
     TechComponent,
-    VidsComponent,
+    AVComponent,
     CraftingComponent,
   ],
 })

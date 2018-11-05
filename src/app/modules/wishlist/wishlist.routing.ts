@@ -4,7 +4,7 @@ import { WishlistMainComponent } from './components/_main/main.component';
 import { WishlistComponent } from './wishlist.component';
 import { ClothingComponent } from './components/clothing/clothing.component';
 import { CraftingComponent } from './components/crafting/crafting.component';
-import { VidsComponent } from './components/vids/vids.component';
+import { AVComponent } from './components/av/av.component';
 import { TechComponent } from './components/tech/tech.component';
 import { HomeComponent } from './components/home/home.component';
 import { MoneyComponent } from './components/money/money.component';
@@ -16,13 +16,13 @@ const wishlistRoutes: Routes = [
     path: '_', component: WishlistComponent,
     children: [
       { path: 'main', component: WishlistMainComponent },
-      { path: 'home', component: HomeComponent },
+      { path: 'av', component: AVComponent },
       { path: 'clothing', component: ClothingComponent },
       { path: 'crafting', component: CraftingComponent },
+      { path: 'home', component: HomeComponent },
       { path: 'money', component: MoneyComponent },
       { path: 'other', component: OtherComponent },
       { path: 'tech', component: TechComponent },
-      { path: 'video', component: VidsComponent },
       { path: '', redirectTo: 'main', pathMatch: 'full' },
       { path: '**', component: ErrorNotFoundComponent},
     ]

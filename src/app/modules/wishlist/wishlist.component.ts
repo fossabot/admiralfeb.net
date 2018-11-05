@@ -12,13 +12,13 @@ export class WishlistComponent implements OnInit {
 
   navItems: NavigationModel[] = [
     { text: 'Wishlist Home', link: 'main'},
+    { text: 'Audio and Visual', link: 'av'},
     { text: 'Clothing', link: 'clothing'},
     { text: 'Crafting', link: 'crafting'},
     { text: 'Home Stuff', link: 'home'},
     { text: 'Money Related', link: 'money'},
     { text: 'Other', link: 'other'},
     { text: 'Technology', link: 'tech'},
-    { text: 'Video', link: 'video'},
   ];
   constructor(
     private titleService: Title
