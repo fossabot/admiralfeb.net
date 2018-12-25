@@ -4,6 +4,10 @@ import { MatSort, MatTableDataSource } from '@angular/material';
 import { SharedModule } from 'src/app/modules/shared-module/shared-module.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ClothingComponent } from './clothing.component';
+import { MarkdownService, MarkedOptions, MarkdownModule } from 'ngx-markdown';
+import { markedOptionsFactory } from '../../markedOptionsFactory';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+
 
 describe('ClothingComponent', () => {
   let component: ClothingComponent;
@@ -11,8 +15,20 @@ describe('ClothingComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [SharedModule, NoopAnimationsModule],
-      declarations: [ClothingComponent]
+      imports: [SharedModule,
+        NoopAnimationsModule,
+        HttpClientModule,
+        MarkdownModule.forRoot({
+          loader: HttpClient,
+          markedOptions: {
+            provide: MarkedOptions,
+            useFactory: markedOptionsFactory,
+          },
+        }),
+      ],
+      declarations: [ClothingComponent],
+      providers: [MarkdownService, MarkedOptions]
+
     })
       .compileComponents();
   }));

@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./other.component.scss']
 })
 export class OtherComponent implements OnInit {
+  markdownFile = 'assets/wishlist/other.md';
 
   constructor() { }
 

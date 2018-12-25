@@ -1,13 +1,3 @@
 <div class="jumbotron">
-  <h3 class="text-center">Home Stuff</h3>
-  <ul>
-    <li>
-      <a href="https://www.amazon.com/hz/wishlist/dl/invite/83j2Twy">Amazon Home Wishlist</a>
-    </li>
-    <li>
-      <a routerLink="../tech" matTooltip="Redirect to Tech page" matTooltipPosition="after">Home Automation</a>
-      <ul>
-      </ul>
-    </li>
-  </ul>
+  <markdown ngPreserveWhitespaces [src]="markdownFile"></markdown>
 </div>
