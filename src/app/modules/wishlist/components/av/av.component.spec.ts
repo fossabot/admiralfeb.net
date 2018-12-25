@@ -2,6 +2,9 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SharedModule } from 'src/app/modules/shared-module/shared-module.module';
 import { AVComponent } from './av.component';
+import { MarkdownService, MarkedOptions, MarkdownModule } from 'ngx-markdown';
+import { markedOptionsFactory } from '../../markedOptionsFactory';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 describe('AVComponent', () => {
     let component: AVComponent;
@@ -9,8 +12,19 @@ describe('AVComponent', () => {
 
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            imports: [SharedModule],
-            declarations: [AVComponent]
+            imports: [
+                SharedModule,
+                HttpClientModule,
+                MarkdownModule.forRoot({
+                    loader: HttpClient,
+                    markedOptions: {
+                        provide: MarkedOptions,
+                        useFactory: markedOptionsFactory,
+                    },
+                }),
+            ],
+            declarations: [AVComponent],
+            providers: [MarkdownService, MarkedOptions]
         })
             .compileComponents();
     }));

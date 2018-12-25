@@ -2,6 +2,9 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SharedModule } from 'src/app/modules/shared-module/shared-module.module';
 import { HomeComponent } from './home.component';
+import { MarkdownService, MarkedOptions, MarkdownModule } from 'ngx-markdown';
+import { markedOptionsFactory } from '../../markedOptionsFactory';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 describe('HomeComponent', () => {
   let component: HomeComponent;
@@ -9,8 +12,19 @@ describe('HomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [SharedModule],
-      declarations: [HomeComponent]
+      imports: [SharedModule,
+        HttpClientModule,
+        MarkdownModule.forRoot({
+          loader: HttpClient,
+          markedOptions: {
+            provide: MarkedOptions,
+            useFactory: markedOptionsFactory,
+          },
+        }),
+      ],
+      declarations: [HomeComponent],
+      providers: [MarkdownService, MarkedOptions]
+
     })
       .compileComponents();
   }));

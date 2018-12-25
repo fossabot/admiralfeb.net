@@ -15,6 +15,7 @@ export interface ZEarrings {
   styleUrls: ['./clothing.component.scss']
 })
 export class ClothingComponent implements OnInit {
+  markdownFile = 'assets/wishlist/clothing.md';
   displayedColumns: string[] = ['stone', 'month', 'count'];
   dataSource = new MatTableDataSource(zEarrings);
 

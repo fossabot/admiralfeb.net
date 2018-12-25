@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./av.component.scss']
 })
 export class AVComponent implements OnInit {
+  markdownFile = 'assets/wishlist/av.md';
 
   constructor() { }
 

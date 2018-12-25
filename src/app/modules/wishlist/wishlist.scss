@@ -4,8 +4,8 @@ h3 {
   font-weight: bold;
 }
 
-[mat-button] {
-  
+markdown p {
+  margin-bottom: 0 !important;
 }
 
 .list-style-none{
@@ -16,14 +16,21 @@ h3 {
   padding-top: 12px;
 }
 
-.note {
+markdown ::ng-deep h1 {
+  text-align: center;
+}
+.note, markdown ::ng-deep .note{
+  text-emphasis: none;
+  font-weight: normal;
   color: mat-color($z-accent);
 }
 .card-note {
   background-color: mat-color($z-accent);
 }
 
-.important {
+.important, markdown ::ng-deep .important {
+  text-emphasis: none !important;
+  font-weight: normal !important;
   color: mat-color($z-warn);
 }
 mat-card.important {
