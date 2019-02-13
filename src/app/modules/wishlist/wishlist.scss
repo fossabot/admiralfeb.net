@@ -4,10 +4,36 @@ h3 {
   font-weight: bold;
 }
 
+markdown p {
+  margin-bottom: 0 !important;
+}
+
+.list-style-none{
+  list-style-type: none;
+}
+
 .jumbotron {
   padding-top: 12px;
 }
 
-.note {
+markdown ::ng-deep h1 {
+  text-align: center;
+}
+.note, markdown ::ng-deep .note{
+  text-emphasis: none;
+  font-weight: normal;
   color: mat-color($z-accent);
+}
+.card-note {
+  background-color: mat-color($z-accent);
+}
+
+.important, markdown ::ng-deep .important {
+  text-emphasis: none !important;
+  font-weight: normal !important;
+  color: mat-color($z-warn);
+}
+mat-card.important {
+  color: white;
+  background-color: mat-color($z-warn);
 }

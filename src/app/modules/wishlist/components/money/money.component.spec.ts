@@ -2,6 +2,9 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SharedModule } from 'src/app/modules/shared-module/shared-module.module';
 import { MoneyComponent } from './money.component';
+import { MarkdownService, MarkedOptions, MarkdownModule } from 'ngx-markdown';
+import { markedOptionsFactory } from '../../markedOptionsFactory';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
 
 describe('MoneyComponent', () => {
   let component: MoneyComponent;
@@ -9,8 +12,19 @@ describe('MoneyComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      imports: [SharedModule],
-      declarations: [MoneyComponent]
+      imports: [SharedModule,
+        HttpClientModule,
+        MarkdownModule.forRoot({
+          loader: HttpClient,
+          markedOptions: {
+            provide: MarkedOptions,
+            useFactory: markedOptionsFactory,
+          },
+        }),
+      ],
+      declarations: [MoneyComponent],
+      providers: [MarkdownService, MarkedOptions]
+
     })
       .compileComponents();
   }));

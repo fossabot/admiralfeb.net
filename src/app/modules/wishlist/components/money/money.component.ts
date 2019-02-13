@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./money.component.scss']
 })
 export class MoneyComponent implements OnInit {
+  markdownFile = 'assets/wishlist/money.md';
 
   constructor() { }
 

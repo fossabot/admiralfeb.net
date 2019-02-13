@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./crafting.component.scss']
 })
 export class CraftingComponent implements OnInit {
+  markdownFile = 'assets/wishlist/crafting.md';
 
   constructor() { }
 

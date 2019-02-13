@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSort, MatTableDataSource } from '@angular/material';
+import { MatDialog } from '@angular/material/dialog';
+import { MessageDialogComponent } from 'src/app/modules/shared-module/components/message-dialog/message-dialog.component';
 
 export interface ZEarrings {
   stone: string;
@@ -7,6 +9,23 @@ export interface ZEarrings {
   count: number;
 }
 
+@Component({
+  selector: 'wishlist-clothing',
+  templateUrl: './clothing.component.html',
+  styleUrls: ['./clothing.component.scss']
+})
+export class ClothingComponent implements OnInit {
+  markdownFile = 'assets/wishlist/clothing.md';
+  displayedColumns: string[] = ['stone', 'month', 'count'];
+  dataSource = new MatTableDataSource(zEarrings);
+
+  @ViewChild(MatSort) sort: MatSort;
+  constructor(private dialog: MatDialog) { }
+
+  ngOnInit() {
+    this.dataSource.sort = this.sort;
+  }
+}
 const zEarrings: ZEarrings[] = [
   {
     stone: 'Tanzanite',
@@ -79,21 +98,3 @@ const zEarrings: ZEarrings[] = [
     count: null
   },
 ];
-
-@Component({
-  selector: 'wishlist-clothing',
-  templateUrl: './clothing.component.html',
-  styleUrls: ['./clothing.component.scss']
-})
-export class ClothingComponent implements OnInit {
-  displayedColumns: string[] = ['stone', 'month', 'count'];
-  dataSource = new MatTableDataSource(zEarrings);
-
-  @ViewChild(MatSort) sort: MatSort;
-  constructor() { }
-
-  ngOnInit() {
-    this.dataSource.sort = this.sort;
-  }
-
-}
