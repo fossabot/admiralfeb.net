@@ -7,7 +7,7 @@
 
 ## Video
 
-- _Big Bang Theory_ - Seasons 11 or 12
+- _Big Bang Theory_ - Season 12
 - Series Sets - ~Not currently necessary as all are available for streaming~
   - Syfy's _Eureka_
   - _Star Trek_

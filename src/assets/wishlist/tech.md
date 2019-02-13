@@ -29,7 +29,7 @@
 - [Nest Protect mk II](https://nest.com/smoke-co-alarm/overview/)
 - [Google Home Hub](https://store.google.com/product/google_home_hub)
   
-  ~I would like one of these for my office.~
+  ~I would like one of these for my kitchen.~
 
 ## Games
 
