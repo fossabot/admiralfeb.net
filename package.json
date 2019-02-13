@@ -9,7 +9,9 @@
     "test": "ng test --watch=true",
     "test-single-headless": "ng test --watch=false --browsers=PhantomJS",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "deploy-test": "./scripts/deploy-test.sh",
+    "deploy-prod": "./scripts/deploy-prod.sh"
   },
   "private": true,
   "dependencies": {
