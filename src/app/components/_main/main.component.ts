@@ -2,6 +2,7 @@ import { Component, OnInit, Output } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { interval } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { environment } from '../../../environments/environment'
 
 @Component({
   selector: 'app-main',
@@ -18,6 +19,8 @@ export class AppMainComponent implements OnInit {
 
   ngOnInit() {
     this.titleService.setTitle(this.title);
+    console.info('Current version of this webpage:', environment.VERSION);
+
     const future = new Date('2018-10-07T17:45:00Z');
     const futuretime = future.getTime();
     const currenttime = new Date().getTime();
@@ -25,9 +28,9 @@ export class AppMainComponent implements OnInit {
       map((x) => {
         return (new Date().getTime() > future.getTime()) ? false : true;
       }));
-      const sub = counter.subscribe((x) => {
-        this.passed = x ? false : true;
-      });
+    const sub = counter.subscribe((x) => {
+      this.passed = x ? false : true;
+    });
   }
 
 }
