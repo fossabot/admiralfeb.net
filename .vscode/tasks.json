@@ -1,0 +1,55 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558 
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Deploy to Test",
+            "type": "npm",
+            "script": "deploy-test",
+            "problemMatcher": []
+        },
+        {
+            "label": "Deploy to Production",
+            "type": "npm",
+            "script": "deploy-prod",
+            "problemMatcher": []
+        },
+        {
+            "label": "Create Angular Object",
+            "type": "shell",
+            "command": "ng",
+            "args": [
+                "g",
+                "${input:componentType}",
+                "${input:componentLocation}"
+            ],
+            "problemMatcher": []
+        },
+        {
+            "label": "Create Angular Object - dry run",
+            "type": "shell",
+            "command": "ng",
+            "args": [
+                "g",
+                "${input:componentType}",
+                "${input:componentLocation}",
+                "--dry-run"
+            ],
+            "problemMatcher": []
+        }
+    ],
+    "inputs": [
+        {
+            "id": "componentType",
+            "description": "Type of Angular object to make",
+            "options": ["component", "service", "module"],
+            "type": "pickString"
+        },
+        {
+            "id": "componentLocation",
+            "description": "location to create object",
+            "type": "promptString"
+        }
+    ]
+}
