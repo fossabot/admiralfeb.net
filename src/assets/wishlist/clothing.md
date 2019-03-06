@@ -22,7 +22,7 @@
   - I have:
     - Buckles: Classic Black
     - Straps: Black webbing
-- Socks: I like ankle socks
+- Socks: I like dark socks. Not a fan of white anymore.
 - Earrings
   
   Sterling Silver or Surgical Steel
