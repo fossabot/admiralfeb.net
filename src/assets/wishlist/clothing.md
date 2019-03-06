@@ -2,6 +2,7 @@
 
 - [Amazon Clothing Wishlist](https://www.amazon.com/hz/wishlist/dl/invite/fpF2d6T)
 - T-shirt size - Adult Small
+- Polo shirts in multiple colors
 - Oxford-type shirts
   - Measurements
     - Slim Fit
@@ -16,6 +17,11 @@
 - Dress Pants
   - Length: 32
   - Waist: 30
+- Grip6 belts and buckles
+  - Size: 30 waist
+  - I have:
+    - Buckles: Classic Black
+    - Straps: Black webbing
 - Socks: I like ankle socks
 - Earrings
   
