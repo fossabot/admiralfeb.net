@@ -3,7 +3,7 @@
 ## Accessories and Devices
 
 - [Automatic Pro](https://automatic.com/pro)
-- [Felik - Automated Pet toy](felik.net) ~This item may be removed from this list~
+- Nintendo Switch - ~Prefer gray and black joycon version~
 - [Google Pixel 3](https://store.google.com/product/pixel_3) Accessories:
   - [Pixel Stand](https://store.google.com/product/pixel_stand)
 
@@ -22,6 +22,7 @@
   - __Motherboard: Unknown__
   - __Graphics Card: Unknown__
   - __VR Ready__
+  - ~It will have Ubuntu installed with Windows 10 as a virtual machine~
 
 ## Home Automation
 
@@ -29,8 +30,20 @@
 - [Nest Protect mk II](https://nest.com/smoke-co-alarm/overview/)
 - [Google Home Hub](https://store.google.com/product/google_home_hub)
   
-  ~I would like one of these for my kitchen.~
+  ~I would like one of these for my office.~
 
 ## Games
 
-~I prefer PC gaming~
+~I prefer PC gaming~ 
+
+&nbsp;
+&nbsp;
+
+#### Nintendo Switch 
+
+~These are dependent on having a Nintendo Switch. It is listed in the Devices section above.~
+
+- Crash Bandicoot N. Sane Trilogy
+- MarioKart 8
+- Spyro Reignited Trilogy
+- Super Mario Odyssey
