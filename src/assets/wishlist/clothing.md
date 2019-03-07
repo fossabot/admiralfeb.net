@@ -2,6 +2,7 @@
 
 - [Amazon Clothing Wishlist](https://www.amazon.com/hz/wishlist/dl/invite/fpF2d6T)
 - T-shirt size - Adult Small
+- Polo shirts
 - Oxford-type shirts
   - Measurements
     - Slim Fit
@@ -16,11 +17,16 @@
 - Dress Pants
   - Length: 32
   - Waist: 30
-- Socks: I like ankle socks
+- [Grip6 belts and buckles](https://grip6.com/)
+  - Size: 30 waist
+  - I have:
+    - Buckles: Classic Black
+    - Straps: Black webbing
+- Socks: I like dark colored socks.
 - Earrings
   
   Sterling Silver or Surgical Steel
   
-  ~Would like at least one of each stone in the table below.~
+  ~Would like at least one of each stone in the table below. The cheaper equivalent (cubic zirconia vs diamond) is definitely acceptable.~
   
   ~The table is sortable.~
