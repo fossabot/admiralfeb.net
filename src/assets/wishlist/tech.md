@@ -3,7 +3,6 @@
 ## Accessories and Devices
 
 - [Automatic Pro](https://automatic.com/pro)
-- Nintendo Switch - ~Prefer gray and black joycon version~
 - [Google Pixel 3](https://store.google.com/product/pixel_3) Accessories:
   - [Pixel Stand](https://store.google.com/product/pixel_stand)
 
@@ -12,17 +11,6 @@
   Accessories:
   - [Folio Keyboard](https://store.google.com/product/pixel_slate_keyboard)
   - [Pixel Slate Pen](https://store.google.com/product/google_pixelbook_pen)
-
-- __A new computer tower with the following:__
-
-  - __RAM 16 GB minimum__
-  - __500 GB (minimum) SSD HD__
-  - __1 TB HD (This may be SSD or not)__
-  - __Processor: Unknown__
-  - __Motherboard: Unknown__
-  - __Graphics Card: Unknown__
-  - __VR Ready__
-  - ~It will have Ubuntu installed with Windows 10 as a virtual machine~
 
 ## Home Automation
 
@@ -41,9 +29,5 @@
 
 #### Nintendo Switch 
 
-~These are dependent on having a Nintendo Switch. It is listed in the Devices section above.~
-
-- Crash Bandicoot N. Sane Trilogy
-- MarioKart 8
 - Spyro Reignited Trilogy
-- Super Mario Odyssey
+- New Super Mario Bros. U Deluxe
