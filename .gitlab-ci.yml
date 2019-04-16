@@ -4,6 +4,7 @@ stages:
   - build
   - test
   - deploy-test
+  - deploy-lab
   - deploy-prod
 
 build:
@@ -46,6 +47,23 @@ deploy:test:
       - node_modules/
   script:
     - npm run deploy
+
+deploy:lab:
+  stage: deploy-lab
+  script:
+  - npm install -g @angular/cli
+  - ng build
+  - mv dist/* public/
+  cache:
+    policy: pull
+    paths:
+      - node_modules/
+  artifacts:
+    paths:
+    - public
+  dependencies: 
+    - build
+  when: manual
 
 deploy:prod:
   stage: deploy-prod
