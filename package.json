@@ -12,7 +12,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "deploy-test": "firebase deploy --only hosting:test --token $FIREBASE_TOKEN --message 'Version: $npm_package_version' --non-interactive",
-    "deploy-prod": "./scripts/deploy-prod.sh"
+    "deploy-prod": "firebase deploy --only hosting:prod --token $FIREBASE_TOKEN --message 'Version: $npm_package_version' --non-interactive"
   },
   "private": true,
   "dependencies": {
