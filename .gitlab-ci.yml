@@ -64,8 +64,6 @@ deploy-test:
 pages:
   stage: deploy-lab
   script:
-  - npm install -g @angular/cli
-  - ng build
   - mv dist/* public/
   cache:
     policy: pull
