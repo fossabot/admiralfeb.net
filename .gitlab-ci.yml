@@ -1,14 +1,20 @@
 image: node:latest
 
 stages:
+  - install
   - build
   - test
   - deploy-lab
   - deploy-test
   - deploy-prod
 
-before_script:
-  - npm install --quiet
+install-dependencies:
+  stage: install
+  cache:
+    paths:
+      - node_modules/
+  script:
+    - npm install --quiet
 
 build:
   stage: build
@@ -17,10 +23,8 @@ build:
       - node_modules/
   script:
     - npm run build-prod
-  except:
-    changes:
-      - .gitlab-ci.yml
   artifacts:
+    expire_in: 1 week
     paths:
       - dist/
       
