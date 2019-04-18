@@ -3,9 +3,12 @@ image: node:latest
 stages:
   - build
   - test
-  - deploy-test
   - deploy-lab
+  - deploy-test
   - deploy-prod
+
+before_script:
+  - npm install --quiet
 
 build:
   stage: build
@@ -13,7 +16,6 @@ build:
     paths:
       - node_modules/
   script:
-    - npm install --quiet
     - npm run build-prod
   except:
     changes:
@@ -49,8 +51,6 @@ deploy-test:
   environment: 
     name: production
     url: $FIREBASE_URL
-  only: 
-   - master
   when: manual
   dependencies:
     - build
