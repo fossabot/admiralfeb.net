@@ -1,5 +1,5 @@
 export const DiningOptions: string[] = [
     'FireHouse Subs',
-    'Chipotle',
+    'Qdoba',
     'Noodles and Company'
 ];
