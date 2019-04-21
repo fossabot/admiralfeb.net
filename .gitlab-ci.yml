@@ -1,9 +1,9 @@
-image: node:latest
+image: registry.gitlab.com/admiralfeb/admiralfeb-net:angular
 
 stages:
   - install
-  - build
   - test
+  - build
   - deploy-lab
   - deploy-test
   - deploy-prod
@@ -11,22 +11,14 @@ stages:
 install-dependencies:
   stage: install
   cache:
+    policy: push
     paths:
       - node_modules/
   script:
     - npm install --quiet
-
-build:
-  stage: build
-  cache:
-    paths:
-      - node_modules/
-  script:
-    - npm run build-prod
-  artifacts:
-    expire_in: 1 week
-    paths:
-      - dist/
+  only:
+    changes:
+      - package.json
       
 test-unit: 
   stage: test
@@ -35,8 +27,6 @@ test-unit:
     paths:
       - node_modules/
   script:
-    # install dependencies to use chrome w/ puppeteer
-    - apt update && apt install -yq gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget
     - npm run test-ci
 
 test-e2e:
@@ -46,15 +36,48 @@ test-e2e:
     paths:
       - node_modules/
   script:
-    # install dependencies to use chrome w/ puppeteer
-    - apt update && apt install -yq gconf-service libasound2 libatk1.0-0 libc6 libcairo2 libcups2 libdbus-1-3 libexpat1 libfontconfig1 libgcc1 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk-3-0 libnspr4 libpango-1.0-0 libpangocairo-1.0-0 libstdc++6 libx11-6 libx11-xcb1 libxcb1 libxcomposite1 libxcursor1 libxdamage1 libxext6 libxfixes3 libxi6 libxrandr2 libxrender1 libxss1 libxtst6 ca-certificates fonts-liberation libappindicator1 libnss3 lsb-release xdg-utils wget
     - npm run e2e-ci
+
+build:
+  stage: build
+  cache:
+    policy: pull
+    paths:
+      - node_modules/
+  script:
+    - npm run build-prod
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - dist/
+
+pages:
+  stage: deploy-lab
+  only: 
+    - develop
+    - release
+    - hotfix
+    - master
+  script:
+  - mv dist/* public/
+  cache:
+    policy: pull
+    paths:
+      - node_modules/
+  artifacts:
+    expire_in: 1 week 
+    paths:
+    - public
+  dependencies: 
+    - build
 
 deploy-test:
   stage: deploy-test
   environment: 
-    name: production
-    url: $FIREBASE_URL
+    name: test
+    url: $FIREBASE_URL_TEST
+  only: 
+   - release
   when: manual
   dependencies:
     - build
@@ -63,27 +86,13 @@ deploy-test:
     paths:
       - node_modules/
   script:
-    - npm run deploy
-
-pages:
-  stage: deploy-lab
-  script:
-  - mv dist/* public/
-  cache:
-    policy: pull
-    paths:
-      - node_modules/
-  artifacts:
-    paths:
-    - public
-  dependencies: 
-    - build
+    - npm run deploy-test
 
 deploy-prod:
   stage: deploy-prod
   environment: 
     name: production
-    url: $FIREBASE_URL
+    url: $FIREBASE_URL_PROD
   only: 
    - master
   when: manual
@@ -94,4 +103,4 @@ deploy-prod:
     paths:
       - node_modules/
   script:
-    - npm run deploy
+    - npm run deploy-prod
