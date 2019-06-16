@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MatSort, MatTableDataSource } from '@angular/material';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
 import { MessageDialogComponent } from 'src/app/modules/shared-module/components/message-dialog/message-dialog.component';
 
@@ -19,7 +20,7 @@ export class ClothingComponent implements OnInit {
   displayedColumns: string[] = ['stone', 'month', 'count'];
   dataSource = new MatTableDataSource(zEarrings);
 
-  @ViewChild(MatSort) sort: MatSort;
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
   constructor(private dialog: MatDialog) { }
 
   ngOnInit() {

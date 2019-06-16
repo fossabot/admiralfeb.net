@@ -1,6 +1,6 @@
 import { Component, NgModule } from '@angular/core';
 import { TestBed, ComponentFixture } from '@angular/core/testing';
-import { MatDialogModule, MatDialog } from '@angular/material';
+import { MatDialogModule, MatDialog } from '@angular/material/dialog';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { OverlayContainer } from '@angular/cdk/overlay';
 import { By } from '@angular/platform-browser';
