@@ -1,5 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { MatSort, MatTableDataSource } from '@angular/material';
+import { MatSort } from '@angular/material/sort';
+import { MatTableDataSource } from '@angular/material/table';
 
 import { SharedModule } from 'src/app/modules/shared-module/shared-module.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';

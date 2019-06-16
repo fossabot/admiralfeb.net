@@ -13,7 +13,7 @@ export class ContentwithSideNavComponent implements OnDestroy, OnInit {
   @Input() navheaderText = 'Navigation';
   @Input() navItems: NavigationModel = null;
   @Input() headerText = '';
-  @ViewChild('snav') sidenav: MatSidenav;
+  @ViewChild('snav', { static: true }) sidenav: MatSidenav;
   mobileQuery: MediaQueryList;
   burgerTip = 'Show/Hide the Navigation Pane';
 
