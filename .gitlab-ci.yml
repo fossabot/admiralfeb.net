@@ -15,7 +15,7 @@ install-dependencies:
     paths:
       - node_modules/
   script:
-    - npm install --quiet
+    - npm install
   only:
     changes:
       - package.json
