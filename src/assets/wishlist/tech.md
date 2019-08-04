@@ -2,7 +2,6 @@
 
 ## Accessories and Devices
 
-- [Automatic Pro](https://automatic.com/pro)
 - [Google Pixel 3](https://store.google.com/product/pixel_3) Accessories:
   - [Pixel Stand](https://store.google.com/product/pixel_stand)
 
