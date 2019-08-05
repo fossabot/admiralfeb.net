@@ -17,11 +17,6 @@
 - Dress Pants
   - Length: 32
   - Waist: 30
-- [Grip6 belts and buckles](https://grip6.com/)
-  - Size: 30 waist
-  - I have:
-    - Buckles: Classic Black
-    - Straps: Black webbing
 - Socks: I like dark colored socks.
 - Earrings
   

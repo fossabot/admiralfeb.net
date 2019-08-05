@@ -1,0 +1,106 @@
+image: registry.gitlab.com/admiralfeb/admiralfeb-net:angular
+
+stages:
+  - install
+  - test
+  - build
+  - deploy-lab
+  - deploy-test
+  - deploy-prod
+
+install-dependencies:
+  stage: install
+  cache:
+    policy: push
+    paths:
+      - node_modules/
+  script:
+    - npm install
+  only:
+    changes:
+      - package.json
+      
+test-unit: 
+  stage: test
+  cache:
+    policy: pull
+    paths:
+      - node_modules/
+  script:
+    - npm run test-ci
+
+test-e2e:
+  stage: test
+  cache:
+    policy: pull
+    paths:
+      - node_modules/
+  script:
+    - npm run e2e-ci
+
+build:
+  stage: build
+  cache:
+    policy: pull
+    paths:
+      - node_modules/
+  script:
+    - npm run build-prod
+  artifacts:
+    expire_in: 1 week
+    paths:
+      - dist/
+
+pages:
+  stage: deploy-lab
+  only: 
+    - develop
+    - release
+    - hotfix
+    - master
+  script:
+  - mv dist/* public/
+  cache:
+    policy: pull
+    paths:
+      - node_modules/
+  artifacts:
+    expire_in: 1 week 
+    paths:
+    - public
+  dependencies: 
+    - build
+
+deploy-test:
+  stage: deploy-test
+  environment: 
+    name: test
+    url: $FIREBASE_URL_TEST
+  only: 
+   - /^release//.+/i
+  when: manual
+  dependencies:
+    - build
+  cache:
+    policy: pull
+    paths:
+      - node_modules/
+  script:
+    - npm run deploy-test
+
+deploy-prod:
+  stage: deploy-prod
+  environment: 
+    name: production
+    url: $FIREBASE_URL_PROD
+  only: 
+   - master
+  when: manual
+  dependencies:
+    - build
+  cache:
+    policy: pull
+    paths:
+      - node_modules/
+  script:
+    - npm run deploy-prod

@@ -7,22 +7,22 @@ import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
   styleUrls: ['./message-dialog.component.scss']
 })
 export class MessageDialogComponent {
-title: string;
-message: string;
+  title: string;
+  message: string;
 
   constructor(
     public dialogRef: MatDialogRef<MessageDialogComponent>,
     @Inject(MAT_DIALOG_DATA) dialogData: DialogData) {
-      this.title = dialogData.title;
-      this.message = dialogData.message;
-    }
+    this.title = dialogData.title;
+    this.message = dialogData.message;
+  }
 
   onNoClick(): void {
     this.dialogRef.close();
   }
 }
 
-class DialogData {
+interface DialogData {
   title: string;
   message: string;
 }
