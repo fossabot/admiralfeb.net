@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./main.component.scss']
 })
 export class WishlistMainComponent implements OnInit {
-  updateDate = '2019-04-01';
+  updateDate = '2019-08-04';
 
   constructor() { }
 
