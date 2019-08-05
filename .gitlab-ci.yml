@@ -77,7 +77,7 @@ deploy-test:
     name: test
     url: $FIREBASE_URL_TEST
   only: 
-   - /^release//.+/i
+   - release
   when: manual
   dependencies:
     - build
