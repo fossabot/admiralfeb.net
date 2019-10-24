@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { CodeMainComponent } from './components/_main/main.component';
 import { CodeComponent } from './code.component';
-import { ErrorNotFoundComponent } from '../shared-module/components/error-not-found/error-not-found.component';
+import { ErrorNotFoundComponent } from '@shared/components/error-not-found/error-not-found.component';
 
 const coderoutes: Routes = [
   {

@@ -1,7 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { AppMainComponent } from './main.component';
-import { SharedModule } from 'src/app/modules/shared-module/shared-module.module';
+import { SharedModule } from '@shared/shared-module.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('AppMainComponent', () => {
@@ -10,7 +10,7 @@ describe('AppMainComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AppMainComponent ],
+      declarations: [AppMainComponent],
       imports: [SharedModule, NoopAnimationsModule]
     })
       .compileComponents();

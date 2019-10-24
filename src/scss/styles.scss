@@ -1,9 +1,10 @@
-@import './z-theme-variables.scss'; 
+@import "variables";
+@import "mixins";
 
 html,
 body {
   /* background-color: lightgray !important; */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   /* font-family: 'Roboto', sans-serif; */
   margin: 0 !important;
   padding: 0;
@@ -12,12 +13,12 @@ body {
 }
 
 a {
-  color: mat-color($z-primary, 300);
+  color: mat-color($primary, 300);
   border-radius: 5px;
 }
 a:hover {
   color: white;
-  background-color: mat-color($z-primary, 500);
+  background-color: mat-color($primary, 500);
 }
 
 h1 {
@@ -65,5 +66,5 @@ h1 {
 }
 
 .jumbotron {
-  background-color: #303030 !important; 
+  background-color: #303030 !important;
 }

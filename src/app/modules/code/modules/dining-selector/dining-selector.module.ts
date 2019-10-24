@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DiningSelectorRoutingModule } from './dining-selector.routing';
 
-import { SharedModule} from '../../../shared-module/shared-module.module';
+import { SharedModule } from '@shared/shared-module.module';
 
 import { DiningSelectorComponent } from './dining-selector.component';
 import { DiningOptionComponent } from './components/dining-option/dining-option.component';

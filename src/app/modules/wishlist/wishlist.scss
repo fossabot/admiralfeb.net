@@ -1,4 +1,4 @@
-@import '../../../z-theme-variables.scss';
+@import "variables";
 
 h3 {
   font-weight: bold;
@@ -8,7 +8,7 @@ markdown p {
   margin-bottom: 0 !important;
 }
 
-.list-style-none{
+.list-style-none {
   list-style-type: none;
 }
 
@@ -19,21 +19,23 @@ markdown p {
 markdown ::ng-deep h1 {
   text-align: center;
 }
-.note, markdown ::ng-deep .note{
+.note,
+markdown ::ng-deep .note {
   text-emphasis: none;
   font-weight: normal;
-  color: mat-color($z-accent);
+  color: mat-color($accent);
 }
 .card-note {
-  background-color: mat-color($z-accent);
+  background-color: mat-color($accent);
 }
 
-.important, markdown ::ng-deep .important {
+.important,
+markdown ::ng-deep .important {
   text-emphasis: none !important;
   font-weight: normal !important;
-  color: mat-color($z-warn);
+  color: mat-color($warn);
 }
 mat-card.important {
   color: white;
-  background-color: mat-color($z-warn);
+  background-color: mat-color($warn);
 }

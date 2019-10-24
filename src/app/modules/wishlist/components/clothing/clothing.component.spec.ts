@@ -2,7 +2,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 
-import { SharedModule } from 'src/app/modules/shared-module/shared-module.module';
+import { SharedModule } from '@shared/shared-module.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { ClothingComponent } from './clothing.component';
 import { MarkdownService, MarkedOptions, MarkdownModule } from 'ngx-markdown';
