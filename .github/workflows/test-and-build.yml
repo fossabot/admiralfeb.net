@@ -23,6 +23,12 @@ jobs:
           npm run test-firefox-ci
         env:
           CI: true
+      - name: Upload CodeCoverage
+        uses: codecov/codecov-action@master
+        with: 
+          token: ${{secrets.CODECOV_TOKEN}}
+          file: coverage/*.json
+          flags: unittests
 
   test-e2e:
     name: e2e Tests
