@@ -15,7 +15,7 @@ export function markedOptionsFactory(): MarkedOptions {
     };
 
     return {
-        renderer: renderer,
+        renderer,
         gfm: true,
         tables: true,
         breaks: false,

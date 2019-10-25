@@ -2,7 +2,7 @@ import { Component, OnInit, Output } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { interval } from 'rxjs';
 import { map } from 'rxjs/operators';
-import { environment } from '../../../environments/environment'
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-main',
