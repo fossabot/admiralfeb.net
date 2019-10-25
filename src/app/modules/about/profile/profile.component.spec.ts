@@ -30,7 +30,7 @@ describe('ProfileComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', async() => {
+  it('should create', async () => {
     expect(component).toBeTruthy();
   });
 });
