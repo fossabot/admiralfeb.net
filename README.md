@@ -1,6 +1,10 @@
-# AdmiralfebNet
+# Admiralfeb.net
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.1.4.
+[![CodeFactor](https://www.codefactor.io/repository/github/admiralfeb/admiralfeb.net/badge)](https://www.codefactor.io/repository/github/admiralfeb/admiralfeb.net)
+[![codecov](https://codecov.io/gh/Admiralfeb/admiralfeb.net/branch/develop/graph/badge.svg)](https://codecov.io/gh/Admiralfeb/admiralfeb.net)
+[![Actions Status](https://github.com/Admiralfeb/admiralfeb.net/workflows/Test%20and%20Build/badge.svg)](https://github.com/Admiralfeb/admiralfeb.net/actions)
+
+This project holds the code for https://admiralfeb.net
 
 ## Development server
 
@@ -21,7 +25,3 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 ## Running end-to-end tests
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
