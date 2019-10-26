@@ -64,7 +64,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-artifact@master
         with:
-          name: build
+          name: dist
           path: dist
 
   deploy:
@@ -79,7 +79,7 @@ jobs:
       - name: Download Build
         uses: actions/download-artifact@master
         with:
-          name: build
+          name: dist
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
