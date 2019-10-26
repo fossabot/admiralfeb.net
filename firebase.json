@@ -1,7 +1,7 @@
 {
   "hosting": [{
     "target": "prod",
-    "public": "dist/admiralfeb-net",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
@@ -16,7 +16,7 @@
   },
   {
     "target": "test",
-    "public": "dist/admiralfeb-net",
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
