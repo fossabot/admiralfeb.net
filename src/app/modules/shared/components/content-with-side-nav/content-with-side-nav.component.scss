@@ -1,3 +1,6 @@
+@import "~@angular/material/theming";
+@import "variables";
+
 .z-container {
   display: flex;
   flex-direction: column;
@@ -29,7 +32,7 @@ mat-sidenav-container.is-mobile {
 
 a.active,
 .active {
-  background-color: rgb(163, 73, 164) !important;
+  background-color: mat-color($primary) !important;
   color: white !important;
 }
 a:hover,
@@ -40,14 +43,13 @@ button:hover,
   cursor: pointer;
 }
 
-mat-nav-list{
+mat-nav-list {
   margin: 5px;
 }
 a.navItem {
   border-radius: 10px;
   font-size: 14px;
 }
-
 
 mat-sidenav.mobile {
   margin-top: 65px;

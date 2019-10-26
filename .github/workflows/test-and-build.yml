@@ -7,16 +7,12 @@ jobs:
     name: Unit Tests
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x]
-
     steps:
       - uses: actions/checkout@v1
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 12.x
       - name: Run Unit Tests
         run: |
           npm ci
@@ -25,7 +21,7 @@ jobs:
           CI: true
       - name: Upload CodeCoverage
         uses: codecov/codecov-action@master
-        with: 
+        with:
           token: ${{secrets.CODECOV_TOKEN}}
           file: coverage/*.json
           flags: unittests
@@ -34,16 +30,12 @@ jobs:
     name: e2e Tests
     runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [10.x, 12.x]
-
     steps:
       - uses: actions/checkout@v1
-      - name: Use Node.js ${{ matrix.node-version }}
+      - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
-          node-version: ${{ matrix.node-version }}
+          node-version: 12.x
       - name: Run e2e Tests
         run: |
           npm ci
@@ -73,4 +65,24 @@ jobs:
         uses: actions/upload-artifact@master
         with:
           name: build
-          path: ./dist
+          path: dist
+
+  deploy:
+    name: Deploy to Firebase
+    needs: [build]
+    runs-on: ubuntu-latest
+    if: GITHUB_REF == master
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Download Build
+        uses: actions/download-artifact@master
+        with:
+          name: build
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting:prod
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

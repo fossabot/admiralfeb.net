@@ -4,12 +4,12 @@ import { switchMap, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-countdown',
-  template: `<span>{{ message }}</span>`,
+  template: `<span>{{ messageString }}</span>`,
   styles: []
 })
 export class CountdownComponent implements OnInit, OnDestroy {
   @Input() inputDate: string;
-  @Output() message: string;
+  @Output() messageString: string;
   @Output() passed = false;
 
   private future: Date;
@@ -17,10 +17,13 @@ export class CountdownComponent implements OnInit, OnDestroy {
   private counter$: Observable<number>;
   private subscription: Subscription;
 
-  constructor() {  }
+  constructor() { }
 
   dhms(t) {
-    let days, hours, minutes, seconds;
+    let days;
+    let hours;
+    let minutes;
+    let seconds;
     days = Math.floor(t / 86400);
     t -= days * 86400;
     hours = Math.floor(t / 3600) % 24;
@@ -49,7 +52,7 @@ export class CountdownComponent implements OnInit, OnDestroy {
     this.subscription = this.counter$.subscribe((x) => {
       const temp = this.dhms(x);
 
-      this.message = (temp.search('NaN') === -1) ? temp : `ERR: 'Counter' failed`;
+      this.messageString = (temp.search('NaN') === -1) ? temp : `ERR: 'Counter' failed`;
     });
   }
 
