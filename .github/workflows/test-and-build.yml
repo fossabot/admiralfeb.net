@@ -71,7 +71,7 @@ jobs:
     name: Deploy to Firebase
     needs: [build]
     runs-on: ubuntu-latest
-    if: GITHUB_REF == master
+    if: github.ref == 'master'
 
     steps:
       - name: Checkout Repo
