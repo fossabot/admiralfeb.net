@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { NavigationModel } from '../shared-module/models/navigationModel';
+import { NavigationModel } from '@shared/models/navigationModel';
 
 @Component({
   selector: 'app-wishlist',

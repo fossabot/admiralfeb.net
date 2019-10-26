@@ -1,6 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 
-import { SharedModule } from '../../../shared-module/shared-module.module';
+import { SharedModule } from '@shared/shared-module.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { DiningSelectorComponent } from './dining-selector.component';

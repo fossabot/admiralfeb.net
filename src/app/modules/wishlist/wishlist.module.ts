@@ -5,7 +5,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { MarkdownModule, MarkedOptions } from 'ngx-markdown';
 
 import { WishlistRoutingModule } from './wishlist.routing';
-import { SharedModule } from '../shared-module/shared-module.module';
+import { SharedModule } from '@shared/shared-module.module';
 
 import { WishlistComponent } from './wishlist.component';
 import { WishlistMainComponent } from './components/_main/main.component';

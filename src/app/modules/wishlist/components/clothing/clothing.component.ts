@@ -2,7 +2,7 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatDialog } from '@angular/material/dialog';
-import { MessageDialogComponent } from 'src/app/modules/shared-module/components/message-dialog/message-dialog.component';
+import { MessageDialogComponent } from '@shared/components/message-dialog/message-dialog.component';
 
 export interface ZEarrings {
   stone: string;

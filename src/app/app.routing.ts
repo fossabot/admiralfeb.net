@@ -1,9 +1,9 @@
 import { ModuleWithProviders } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { UnderConstructionComponent } from './modules/shared-module/components/under-construction/under-construction.component';
+import { UnderConstructionComponent } from '@shared/components/under-construction/under-construction.component';
 import { AppMainComponent } from './components/_main/main.component';
-import { ErrorNotFoundComponent } from './modules/shared-module/components/error-not-found/error-not-found.component';
+import { ErrorNotFoundComponent } from '@shared/components/error-not-found/error-not-found.component';
 
 const routes: Routes = [
   { path: 'home', component: AppMainComponent },

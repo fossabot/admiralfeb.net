@@ -9,7 +9,7 @@ import { TechComponent } from './components/tech/tech.component';
 import { HomeComponent } from './components/home/home.component';
 import { MoneyComponent } from './components/money/money.component';
 import { OtherComponent } from './components/other/other.component';
-import { ErrorNotFoundComponent } from '../shared-module/components/error-not-found/error-not-found.component';
+import { ErrorNotFoundComponent } from '@shared/components/error-not-found/error-not-found.component';
 
 const wishlistRoutes: Routes = [
   {

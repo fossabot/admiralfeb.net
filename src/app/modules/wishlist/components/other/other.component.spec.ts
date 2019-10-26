@@ -1,6 +1,6 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { SharedModule } from 'src/app/modules/shared-module/shared-module.module';
+import { SharedModule } from '@shared/shared-module.module';
 import { OtherComponent } from './other.component';
 import { MarkdownService, MarkedOptions, MarkdownModule } from 'ngx-markdown';
 import { markedOptionsFactory } from '../../markedOptionsFactory';

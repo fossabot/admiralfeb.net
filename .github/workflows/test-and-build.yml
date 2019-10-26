@@ -1,0 +1,88 @@
+name: Test and Build
+
+on: [push]
+
+jobs:
+  test-spec:
+    name: Unit Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Run Unit Tests
+        run: |
+          npm ci
+          npm run test-firefox-ci
+        env:
+          CI: true
+      - name: Upload CodeCoverage
+        uses: codecov/codecov-action@master
+        with:
+          token: ${{secrets.CODECOV_TOKEN}}
+          file: coverage/*.json
+          flags: unittests
+
+  test-e2e:
+    name: e2e Tests
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Run e2e Tests
+        run: |
+          npm ci
+          ./node_modules/protractor/bin/webdriver-manager update
+          npm run e2e-firefox-ci
+        env:
+          CI: true
+
+  build:
+    name: Build
+    needs: [test-spec, test-e2e]
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v1
+      - name: Use Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+      - name: Run Build
+        run: |
+          npm ci
+          npm run build --if-present
+        env:
+          CI: true
+      - name: Upload artifact
+        uses: actions/upload-artifact@master
+        with:
+          name: build
+          path: dist
+
+  deploy:
+    name: Deploy to Firebase
+    needs: [build]
+    runs-on: ubuntu-latest
+    if: github.ref == 'master'
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Download Build
+        uses: actions/download-artifact@master
+        with:
+          name: build
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting:prod
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}

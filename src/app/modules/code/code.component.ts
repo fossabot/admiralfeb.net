@@ -1,6 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Title } from '@angular/platform-browser';
-import { NavigationModel } from '../shared-module/models/navigationModel';
+import { NavigationModel } from '@shared/models/navigationModel';
 
 @Component({
   selector: 'app-code',
@@ -11,8 +11,8 @@ export class CodeComponent implements OnInit {
   tipNavButton = 'Show/Hide the Navigation Panel';
   title = `Admiralfeb's Code`;
   navItems: NavigationModel[] = [
-    { text: 'Code Home', link: 'main'},
-    { text: 'Dining Selector', link: 'dining_selector'},
+    { text: 'Code Home', link: 'main' },
+    { text: 'Dining Selector', link: 'dining_selector' },
   ];
 
   constructor(private titleService: Title) { }

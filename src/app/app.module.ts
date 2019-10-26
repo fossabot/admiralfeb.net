@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { routing } from './app.routing';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
-import { SharedModule } from './modules/shared-module/shared-module.module';
+import { SharedModule } from '@shared/shared-module.module';
 
 import { AppComponent } from './app.component';
 import { AppMainComponent } from './components/_main/main.component';

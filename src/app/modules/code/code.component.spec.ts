@@ -3,7 +3,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { CodeComponent } from './code.component';
 import { RouterTestingModule } from '@angular/router/testing';
-import { SharedModule } from '../shared-module/shared-module.module';
+import { SharedModule } from '@shared/shared-module.module';
 
 describe('CodeComponent', () => {
   let component: CodeComponent;

@@ -7,7 +7,7 @@ import { DiningOptions } from '../../mock-options';
 import { MessageService } from '../../message.service';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { MatDialog } from '@angular/material/dialog';
-import { MessageDialogComponent } from 'src/app/modules/shared-module/components/message-dialog/message-dialog.component';
+import { MessageDialogComponent } from '@shared/components/message-dialog/message-dialog.component';
 
 export class MyErrorStateMatcher implements ErrorStateMatcher {
   isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
@@ -56,13 +56,14 @@ export class DiningOptionComponent implements OnInit {
   }
 
   sortOptions(): void {
-    this.diningOptions.sort(function (a, b) {
+    this.diningOptions.sort((a, b) => {
       return a.toLowerCase().localeCompare(b.toLowerCase());
     });
     this.messageService.add('Sorted Options');
   }
 
   addOptions(values: string[]): void {
+    // tslint:disable-next-line: prefer-for-of
     for (let i = 0; i < values.length; i++) {
       const element = values[i];
       this.addOption(element);

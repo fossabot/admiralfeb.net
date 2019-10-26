@@ -64,7 +64,58 @@ export interface URL {
 
 // Converts JSON strings to/from your types
 // and asserts the results of JSON.parse at runtime
+// tslint:disable-next-line: no-namespace
 export namespace Convert {
+    const typeMap: any = {
+        Welcome: o([
+            { json: 'entry', js: 'entry', typ: a(r('Entry')) },
+        ], false),
+        Entry: o([
+            { json: 'id', js: 'id', typ: '' },
+            { json: 'hash', js: 'hash', typ: '' },
+            { json: 'requestHash', js: 'requestHash', typ: '' },
+            { json: 'profileUrl', js: 'profileUrl', typ: '' },
+            { json: 'preferredUsername', js: 'preferredUsername', typ: '' },
+            { json: 'thumbnailUrl', js: 'thumbnailUrl', typ: '' },
+            { json: 'photos', js: 'photos', typ: a(r('Photo')) },
+            { json: 'profileBackground', js: 'profileBackground', typ: r('ProfileBackground') },
+            { json: 'name', js: 'name', typ: r('Name') },
+            { json: 'displayName', js: 'displayName', typ: '' },
+            { json: 'aboutMe', js: 'aboutMe', typ: '' },
+            { json: 'emails', js: 'emails', typ: a(r('Email')) },
+            { json: 'accounts', js: 'accounts', typ: a(r('Account')) },
+            { json: 'urls', js: 'urls', typ: a(r('URL')) },
+        ], false),
+        Account: o([
+            { json: 'domain', js: 'domain', typ: '' },
+            { json: 'display', js: 'display', typ: '' },
+            { json: 'url', js: 'url', typ: '' },
+            { json: 'username', js: 'username', typ: '' },
+            { json: 'verified', js: 'verified', typ: '' },
+            { json: 'shortname', js: 'shortname', typ: '' },
+        ], false),
+        Email: o([
+            { json: 'primary', js: 'primary', typ: '' },
+            { json: 'value', js: 'value', typ: '' },
+        ], false),
+        Name: o([
+            { json: 'givenName', js: 'givenName', typ: '' },
+            { json: 'familyName', js: 'familyName', typ: '' },
+            { json: 'formatted', js: 'formatted', typ: '' },
+        ], false),
+        Photo: o([
+            { json: 'value', js: 'value', typ: '' },
+            { json: 'type', js: 'type', typ: u(undefined, '') },
+        ], false),
+        ProfileBackground: o([
+            { json: 'color', js: 'color', typ: '' },
+        ], false),
+        URL: o([
+            { json: 'value', js: 'value', typ: '' },
+            { json: 'title', js: 'title', typ: '' },
+        ], false),
+    };
+
     export function toWelcome(json: string): Welcome {
         return cast(JSON.parse(json), r('Welcome'));
     }
@@ -188,54 +239,4 @@ export namespace Convert {
     function r(name: string) {
         return { ref: name };
     }
-
-    const typeMap: any = {
-        'Welcome': o([
-            { json: 'entry', js: 'entry', typ: a(r('Entry')) },
-        ], false),
-        'Entry': o([
-            { json: 'id', js: 'id', typ: '' },
-            { json: 'hash', js: 'hash', typ: '' },
-            { json: 'requestHash', js: 'requestHash', typ: '' },
-            { json: 'profileUrl', js: 'profileUrl', typ: '' },
-            { json: 'preferredUsername', js: 'preferredUsername', typ: '' },
-            { json: 'thumbnailUrl', js: 'thumbnailUrl', typ: '' },
-            { json: 'photos', js: 'photos', typ: a(r('Photo')) },
-            { json: 'profileBackground', js: 'profileBackground', typ: r('ProfileBackground') },
-            { json: 'name', js: 'name', typ: r('Name') },
-            { json: 'displayName', js: 'displayName', typ: '' },
-            { json: 'aboutMe', js: 'aboutMe', typ: '' },
-            { json: 'emails', js: 'emails', typ: a(r('Email')) },
-            { json: 'accounts', js: 'accounts', typ: a(r('Account')) },
-            { json: 'urls', js: 'urls', typ: a(r('URL')) },
-        ], false),
-        'Account': o([
-            { json: 'domain', js: 'domain', typ: '' },
-            { json: 'display', js: 'display', typ: '' },
-            { json: 'url', js: 'url', typ: '' },
-            { json: 'username', js: 'username', typ: '' },
-            { json: 'verified', js: 'verified', typ: '' },
-            { json: 'shortname', js: 'shortname', typ: '' },
-        ], false),
-        'Email': o([
-            { json: 'primary', js: 'primary', typ: '' },
-            { json: 'value', js: 'value', typ: '' },
-        ], false),
-        'Name': o([
-            { json: 'givenName', js: 'givenName', typ: '' },
-            { json: 'familyName', js: 'familyName', typ: '' },
-            { json: 'formatted', js: 'formatted', typ: '' },
-        ], false),
-        'Photo': o([
-            { json: 'value', js: 'value', typ: '' },
-            { json: 'type', js: 'type', typ: u(undefined, '') },
-        ], false),
-        'ProfileBackground': o([
-            { json: 'color', js: 'color', typ: '' },
-        ], false),
-        'URL': o([
-            { json: 'value', js: 'value', typ: '' },
-            { json: 'title', js: 'title', typ: '' },
-        ], false),
-    };
 }
