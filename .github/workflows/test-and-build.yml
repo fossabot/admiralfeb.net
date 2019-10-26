@@ -55,6 +55,11 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
+      - name: Get Build Version
+        id: vars
+        run: echo ::set-output name=build_version::$(node scripts/getVersion.js)
+      - name: Test Using Build Version
+        run: echo ${{ steps.vars.outputs.build_version }}
       - name: Run Build
         run: |
           npm ci
@@ -80,9 +85,12 @@ jobs:
         uses: actions/download-artifact@master
         with:
           name: dist
+      - name: Get Build Version
+        id: vars
+        run: echo ::set-output name=build_version::$(node scripts/getVersion.js)
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting:prod
+          args: deploy --only hosting:prod -m ${{ steps.vars.outputs.build_version }}
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
