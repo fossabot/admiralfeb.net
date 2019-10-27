@@ -13,10 +13,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
+      - name: Install Project
+        run: npm ci
       - name: Run Unit Tests
-        run: |
-          npm ci
-          npm run test-firefox-ci
+        run: npm run test-firefox-ci
         env:
           CI: true
       - name: Upload CodeCoverage
@@ -36,13 +36,12 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
+      - name: Install Project
+        run: npm ci
+      - name: Run webdriver update
+        run: ./node_modules/protractor/bin/webdriver-manager update
       - name: Run e2e Tests
-        run: |
-          npm ci
-          ./node_modules/protractor/bin/webdriver-manager update
-          npm run e2e-firefox-ci
-        env:
-          CI: true
+        run: npm run e2e-firefox-ci
 
   build:
     name: Build
@@ -63,9 +62,7 @@ jobs:
       - name: Run Build
         run: |
           npm ci
-          npm run build --if-present
-        env:
-          CI: true
+          npm run build
       - name: Upload artifact
         uses: actions/upload-artifact@master
         with:

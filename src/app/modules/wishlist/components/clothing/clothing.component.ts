@@ -9,24 +9,6 @@ export interface ZEarrings {
   month: string;
   count: number;
 }
-
-@Component({
-  selector: 'wishlist-clothing',
-  templateUrl: './clothing.component.html',
-  styleUrls: ['./clothing.component.scss']
-})
-export class ClothingComponent implements OnInit {
-  markdownFile = 'assets/wishlist/clothing.md';
-  displayedColumns: string[] = ['stone', 'month', 'count'];
-  dataSource = new MatTableDataSource(zEarrings);
-
-  @ViewChild(MatSort, { static: true }) sort: MatSort;
-  constructor(private dialog: MatDialog) { }
-
-  ngOnInit() {
-    this.dataSource.sort = this.sort;
-  }
-}
 const zEarrings: ZEarrings[] = [
   {
     stone: 'Tanzanite',
@@ -99,3 +81,22 @@ const zEarrings: ZEarrings[] = [
     count: null
   },
 ];
+
+@Component({
+  selector: 'wishlist-clothing',
+  templateUrl: './clothing.component.html',
+  styleUrls: ['./clothing.component.scss']
+})
+export class ClothingComponent implements OnInit {
+  markdownFile = 'assets/wishlist/clothing.md';
+  displayedColumns: string[] = ['stone', 'month', 'count'];
+  dataSource = new MatTableDataSource(zEarrings);
+
+  @ViewChild(MatSort, { static: true }) sort: MatSort;
+  constructor(private dialog: MatDialog) { }
+
+  ngOnInit() {
+    this.dataSource.sort = this.sort;
+  }
+}
+

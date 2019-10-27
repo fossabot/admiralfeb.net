@@ -19,7 +19,7 @@ export class AppMainComponent implements OnInit {
 
   ngOnInit() {
     this.titleService.setTitle(this.title);
-    console.info('Current version of this webpage:', environment.VERSION);
+    console.log('Current version of this webpage:', environment.VERSION);
 
     const future = new Date('2018-10-07T17:45:00Z');
     const futuretime = future.getTime();

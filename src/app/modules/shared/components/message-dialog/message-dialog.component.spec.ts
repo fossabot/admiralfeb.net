@@ -9,6 +9,27 @@ import { MaterialModule } from '../../material/material.module';
 
 import { MessageDialogComponent } from './message-dialog.component';
 
+// Noop component is only a workaround to trigger change detection
+@Component({
+  template: ''
+})
+class NoopComponent {}
+
+const TEST_DIRECTIVES = [
+  MessageDialogComponent,
+  NoopComponent
+];
+
+@NgModule({
+  imports: [MatDialogModule, NoopAnimationsModule],
+  exports: TEST_DIRECTIVES,
+  declarations: TEST_DIRECTIVES,
+  entryComponents: [
+    MessageDialogComponent
+  ],
+})
+class DialogTestModule { }
+
 describe('MessageDialogComponent', () => {
   let dialog: MatDialog;
   let overlayContainerElement: HTMLElement;
@@ -51,24 +72,5 @@ describe('MessageDialogComponent', () => {
   });
 });
 
-// Noop component is only a workaround to trigger change detection
-@Component({
-  template: ''
-})
-class NoopComponent {}
 
-const TEST_DIRECTIVES = [
-  MessageDialogComponent,
-  NoopComponent
-];
-
-@NgModule({
-  imports: [MatDialogModule, NoopAnimationsModule],
-  exports: TEST_DIRECTIVES,
-  declarations: TEST_DIRECTIVES,
-  entryComponents: [
-    MessageDialogComponent
-  ],
-})
-class DialogTestModule { }
 
